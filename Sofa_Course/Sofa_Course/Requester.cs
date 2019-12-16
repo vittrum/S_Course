@@ -51,10 +51,10 @@ namespace Sofa_Course {
 
         }
         #endregion
+//
+       // #region student 
 
-        #region student 
-
-        public void Show_Living_Students(Factory factory, )
+       // public void Show_Living_Students(Factory factory, )
 
 
     }

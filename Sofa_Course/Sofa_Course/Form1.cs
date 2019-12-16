@@ -13,5 +13,7 @@ namespace Sofa_Course {
         public Form1() {
             InitializeComponent();
         }
+
+        
     }
 }

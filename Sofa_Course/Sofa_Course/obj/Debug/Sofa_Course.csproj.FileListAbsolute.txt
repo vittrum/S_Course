@@ -1,0 +1,4 @@
+C:\Users\vittrum\Desktop\Sofa_Course\Sofa_Course\Sofa_Course\obj\Debug\Sofa_Course.csprojAssemblyReference.cache
+C:\Users\vittrum\Desktop\Sofa_Course\Sofa_Course\Sofa_Course\obj\Debug\Sofa_Course.Form1.resources
+C:\Users\vittrum\Desktop\Sofa_Course\Sofa_Course\Sofa_Course\obj\Debug\Sofa_Course.Properties.Resources.resources
+C:\Users\vittrum\Desktop\Sofa_Course\Sofa_Course\Sofa_Course\obj\Debug\Sofa_Course.csproj.GenerateResource.cache
