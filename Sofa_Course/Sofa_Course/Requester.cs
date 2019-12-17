@@ -47,14 +47,45 @@ namespace Sofa_Course {
 
         }
 
-        public void Return_Linens(Factory factory, string id_stud, string id_linens) {
+        public void Return_Linens(Factory factory, string id_linens) {
+
+        }
+
+        public void GetLinens(Factory factory, DataGridView dgv) {
 
         }
         #endregion
-//
-       // #region student 
 
-       // public void Show_Living_Students(Factory factory, )
+        #region student 
+
+        public void Show_Living_Students(Factory factory, DataGridView dgv) {
+
+        }
+
+        public void Create_Repair_Request(Factory factory, string id_stud, string repair_text) {
+
+        }
+
+        public void Confirm_repairs (Factory factory, string id_stud, string id_repair) {
+
+        }
+
+        #endregion
+
+        // Techpersonal
+
+        public void Show_Repair_Requests(Factory factory, DataGridView dgv) {
+
+        }
+
+        // Остальное
+        public void Send_Report (Factory factory, string id_stud, string text) {
+
+        }
+
+        public void Show_Guests(Factory factory, DataGridView dgv) {
+
+        }
 
 
     }
