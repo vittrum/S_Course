@@ -15,7 +15,7 @@ namespace Sofa_Course {
         }
 
         Requester requester = new Requester();
-        Factory factory = new Factory();
+        Factory factory = new Factory("127.0.0.1", "5432", "postgres", "1", "sofa");
         string login;
 
         #region Student
@@ -124,7 +124,8 @@ namespace Sofa_Course {
         private void BtnSettle_Click(object sender, EventArgs e) {
             requester.Settle_Student(factory, tbZavName.Text, tbZavSurname.Text,
                 tbZavPatr.Text, tbZavStudNum.Text, tbPaycheck.Text,
-                tbSanprop.Text, tbRoomNum.Text);
+                tbSanprop.Text, tbRoomNum.Text, tbZavFac.Text, tbZavSpec.Text, 
+                comboPrivName.SelectedItem.ToString(), dateSettle.Value.ToShortDateString());
         }
         private void BtnSetPen_Click(object sender, EventArgs e) {
             requester.Set_Penalty(factory, comboOtrabotki.SelectedItem.ToString(), tbSetPen.Text);
@@ -136,7 +137,7 @@ namespace Sofa_Course {
         #endregion
         // Заявка о нарушении
         private void BtnSendReport_Click(object sender, EventArgs e) {
-            requester.Send_Report(factory, tbReportNum.Text, tbTextReport.Text);
+            requester.Send_Report(factory, tbReportNum.Text, tbTextReport.Text, dateViolation.Value.ToShortDateString());
         }
 
         

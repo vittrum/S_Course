@@ -11,7 +11,8 @@ namespace Sofa_Course {
     class Requester {
         #region zaveduyschii
         public void Settle_Student(Factory factory, string name, string surname,
-            string patronymic, string id, string id_pay, string sanitar, string id_room) {
+            string patronymic, string id, string id_pay, string sanitar, string id_room,
+            string fac, string spec, string priv, string set_date) {
 
         }
         public void Kick_Student(Factory factory, string id_stud) {
@@ -79,8 +80,8 @@ namespace Sofa_Course {
         }
 
         // Остальное
-        public void Send_Report (Factory factory, string id_stud, string text) {
-
+        public void Send_Report (Factory factory, string id_stud, string text, string date) {
+            factory.report.CreateReport(id_stud, text, date);
         }
 
         public void Show_Guests(Factory factory, DataGridView dgv) {

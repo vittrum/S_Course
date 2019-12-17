@@ -11,9 +11,11 @@ namespace Sofa_Course {
         public NpgsqlConnection NpgsqlConnection;
         public Connection SqlConnection;
 
-        public Login log { private get; set; }
-        public Login login => log;
-        
+        public ReposStudent student { get; }
+        public ReposGuest guest { get; }
+        public ReposReport report { get; }
+        public ReposLinens linens { get; }
+        public ReposRepair repair { get; }
         
 
         private bool Disposed = false;
@@ -21,10 +23,12 @@ namespace Sofa_Course {
         public Factory(string server, string port, string user, string pass, string dbname) {
             string ConnectionString = "Server=" + server + "; Port=" + port + "; User Id=" + user + "; Password=" + pass + "; Database=" + dbname + ";";
             NpgsqlConnection = new NpgsqlConnection(ConnectionString);
-            Connection = new Connection(NpgsqlConnection);
+            SqlConnection = new Connection(NpgsqlConnection);
             OpenConnection();
-            RepositoryBusiness_Trip = new RepositoryBusiness_Trip(SqlConnection);
-            
+            guest = new ReposGuest(SqlConnection);
+            student = new ReposStudent(SqlConnection);
+            report = new ReposReport(SqlConnection);
+
         }
 
         public void OpenConnection() {
