@@ -47,8 +47,10 @@ namespace Sofa_Course {
             dgvStaffShowRequests.Columns.Clear();
             dgvStaffShowRequests.Columns.Add("id_req", "Номер заявки");
             dgvStaffShowRequests.Columns.Add("id_room", "Номер комнаты");
-            dgvStaffShowRequests.Columns.Add("date", "Дата подачи");
+            dgvStaffShowRequests.Columns.Add("type", "Тип работ");
             dgvStaffShowRequests.Columns.Add("text", "Тема");
+            dgvStaffShowRequests.Columns.Add("dateb", "Дата подачи");
+            dgvStaffShowRequests.Columns.Add("datee", "Дата вып");
         }
 
         public void FillDgvLinens() {
@@ -56,8 +58,7 @@ namespace Sofa_Course {
             dgvLinens.Columns.Add("id_lin", "Номер белья");
             dgvLinens.Columns.Add("id_stud", "Номер билета");
             dgvLinens.Columns.Add("date_", "Дата выдачи");
-            dgvLinens.Columns.Add("room", "Номер комнаты");
-
+            //dgvLinens.Columns.Add("room", "Номер комнаты");
         }
 
         public void FillDgvWatcher() {
@@ -74,9 +75,9 @@ namespace Sofa_Course {
             dgvWatchGuests.Columns.Clear();
             dgvWatchGuests.Columns.Add("id_stud", "Номер студента");
             dgvWatchGuests.Columns.Add("name", "Имя");
-            dgvWatchGuests.Columns.Add("lname", "Фамилия");
-            dgvWatchGuests.Columns.Add("patr", "Отчество");
-            dgvWatchGuests.Columns.Add("place", "Прописка");
+            dgvWatchGuests.Columns.Add("room", "Комната");
+            dgvWatchGuests.Columns.Add("reg", "Прописка");
+            dgvWatchGuests.Columns.Add("date", "Время");
         }
 
 
@@ -90,7 +91,7 @@ namespace Sofa_Course {
         // Завхоз
         private void BtnGuveLinens_Click(object sender, EventArgs e) {
             requester.Give_Linens(factory, tbLinensStudent.Text,
-                comboLinensId.SelectedItem.ToString(),
+                tbLinensId.Text,
                 dateLinensGive.Value.ToShortDateString());
             FillDgvLinens();
             requester.GetLinens(factory, dgvLinens);
@@ -104,28 +105,37 @@ namespace Sofa_Course {
         }
         // Вахтёр
         private void BtnPassStudent_Click(object sender, EventArgs e) {
-            requester.Pass_student(factory, tbWatchIdFind.Text);
             FillDgvWatcher();
-            requester.Show_Living_Students(factory, dgvWatchIdFind);
+            requester.Pass_student(factory, dgvWatchIdFind, tbWatchIdFind.Text);
+            
+            //requester.Show_Living_Students(factory, dgvWatchIdFind);
         }
 
         private void BtnPassGuest_Click(object sender, EventArgs e) {
-            requester.Pass_Guest(factory, tbGuestId.Text, tbGuestName.Text, tbGuestSurname.Text,
+           /** requester.Pass_Guest(factory, tbGuestId.Text, tbGuestName.Text, tbGuestSurname.Text,
                 tbGuestPatr.Text, tbGuestHome.Text);
             FillDgvWatchGuests();
-            requester.Show_Guests(factory, dgvWatchGuests);
+            requester.Show_Guests(factory, dgvWatchGuests);*/
         }
 
         private void BtnShowGuests_Click(object sender, EventArgs e) {
-            FillDgvWatchGuests();
-            requester.Show_Guests(factory, dgvWatchGuests);
+           /* FillDgvWatchGuests();
+            requester.Show_Guests(factory, dgvWatchGuests);*/
         }
         #region Zaveduyuschii
         private void BtnSettle_Click(object sender, EventArgs e) {
-            requester.Settle_Student(factory, tbZavName.Text, tbZavSurname.Text,
-                tbZavPatr.Text, tbZavStudNum.Text, tbPaycheck.Text,
-                tbSanprop.Text, tbRoomNum.Text, tbZavFac.Text, tbZavSpec.Text, 
-                comboPrivName.SelectedItem.ToString(), dateSettle.Value.ToShortDateString());
+            requester.Settle_Student(factory, 
+                tbZavName.Text, 
+                tbZavSurname.Text,
+                tbZavPatr.Text,
+                tbZavStudNum.Text, 
+                tbPaycheck.Text,
+                dateSani.Value.ToShortDateString(), 
+                tbRoomNum.Text, 
+                tbZavFac.Text, 
+                tbZavSpec.Text, 
+                comboPrivName.SelectedItem.ToString(),
+                dateSettle.Value.ToShortDateString());
         }
         private void BtnSetPen_Click(object sender, EventArgs e) {
             requester.Set_Penalty(factory, comboOtrabotki.SelectedItem.ToString(), tbSetPen.Text);

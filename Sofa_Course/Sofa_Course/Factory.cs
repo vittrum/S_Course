@@ -28,7 +28,8 @@ namespace Sofa_Course {
             guest = new ReposGuest(SqlConnection);
             student = new ReposStudent(SqlConnection);
             report = new ReposReport(SqlConnection);
-
+            linens = new ReposLinens(SqlConnection);
+            repair = new ReposRepair(SqlConnection);
         }
 
         public void OpenConnection() {

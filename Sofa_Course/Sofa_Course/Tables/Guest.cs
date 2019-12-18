@@ -6,5 +6,6 @@ using System.Threading.Tasks;
 
 namespace Sofa_Course.Tables {
     class Guest {
+        
     }
 }

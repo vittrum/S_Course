@@ -60,7 +60,6 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.btnGuveLinens = new System.Windows.Forms.Button();
             this.dateLinensGive = new System.Windows.Forms.DateTimePicker();
-            this.comboLinensId = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tbLinensStudent = new System.Windows.Forms.TextBox();
@@ -96,6 +95,10 @@
             this.tbSetPen = new System.Windows.Forms.TextBox();
             this.comboOtrabotki = new System.Windows.Forms.ComboBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.dateSettle = new System.Windows.Forms.DateTimePicker();
+            this.label33 = new System.Windows.Forms.Label();
+            this.comboPrivName = new System.Windows.Forms.ComboBox();
+            this.label32 = new System.Windows.Forms.Label();
             this.btnSettle = new System.Windows.Forms.Button();
             this.tbRoomNum = new System.Windows.Forms.TextBox();
             this.tbZavStudNum = new System.Windows.Forms.TextBox();
@@ -107,7 +110,6 @@
             this.tbZavPatr = new System.Windows.Forms.TextBox();
             this.tbPaycheck = new System.Windows.Forms.TextBox();
             this.tbZavSurname = new System.Windows.Forms.TextBox();
-            this.tbSanprop = new System.Windows.Forms.TextBox();
             this.tbZavName = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
@@ -117,16 +119,14 @@
             this.label23 = new System.Windows.Forms.Label();
             this.tabReport = new System.Windows.Forms.TabPage();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.dateViolation = new System.Windows.Forms.DateTimePicker();
             this.label13 = new System.Windows.Forms.Label();
             this.tbTextReport = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.tbReportNum = new System.Windows.Forms.TextBox();
             this.btnSendReport = new System.Windows.Forms.Button();
-            this.dateViolation = new System.Windows.Forms.DateTimePicker();
-            this.label32 = new System.Windows.Forms.Label();
-            this.comboPrivName = new System.Windows.Forms.ComboBox();
-            this.label33 = new System.Windows.Forms.Label();
-            this.dateSettle = new System.Windows.Forms.DateTimePicker();
+            this.dateSani = new System.Windows.Forms.DateTimePicker();
+            this.tbLinensId = new System.Windows.Forms.TextBox();
             this.tabCon.SuspendLayout();
             this.tabLogin.SuspendLayout();
             this.tabStudent.SuspendLayout();
@@ -179,7 +179,7 @@
             this.tabLogin.Controls.Add(this.tbLogin);
             this.tabLogin.Location = new System.Drawing.Point(4, 22);
             this.tabLogin.Name = "tabLogin";
-            this.tabLogin.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabLogin.Padding = new System.Windows.Forms.Padding(3);
             this.tabLogin.Size = new System.Drawing.Size(1063, 561);
             this.tabLogin.TabIndex = 0;
             this.tabLogin.Text = "Login";
@@ -259,7 +259,7 @@
             this.tabStudent.Controls.Add(this.groupBox1);
             this.tabStudent.Location = new System.Drawing.Point(4, 22);
             this.tabStudent.Name = "tabStudent";
-            this.tabStudent.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabStudent.Padding = new System.Windows.Forms.Padding(3);
             this.tabStudent.Size = new System.Drawing.Size(1063, 561);
             this.tabStudent.TabIndex = 1;
             this.tabStudent.Text = "Студент";
@@ -415,7 +415,7 @@
             this.tabStaff.Controls.Add(this.dgvStaffShowRequests);
             this.tabStaff.Location = new System.Drawing.Point(4, 22);
             this.tabStaff.Name = "tabStaff";
-            this.tabStaff.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabStaff.Padding = new System.Windows.Forms.Padding(3);
             this.tabStaff.Size = new System.Drawing.Size(1063, 561);
             this.tabStaff.TabIndex = 2;
             this.tabStaff.Text = "Техперсонал";
@@ -449,7 +449,7 @@
             this.tabSupMan.Controls.Add(this.groupBox5);
             this.tabSupMan.Location = new System.Drawing.Point(4, 22);
             this.tabSupMan.Name = "tabSupMan";
-            this.tabSupMan.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabSupMan.Padding = new System.Windows.Forms.Padding(3);
             this.tabSupMan.Size = new System.Drawing.Size(1063, 561);
             this.tabSupMan.TabIndex = 3;
             this.tabSupMan.Text = "Завхоз";
@@ -492,9 +492,9 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.tbLinensId);
             this.groupBox5.Controls.Add(this.btnGuveLinens);
             this.groupBox5.Controls.Add(this.dateLinensGive);
-            this.groupBox5.Controls.Add(this.comboLinensId);
             this.groupBox5.Controls.Add(this.label8);
             this.groupBox5.Controls.Add(this.label6);
             this.groupBox5.Controls.Add(this.tbLinensStudent);
@@ -521,14 +521,6 @@
             this.dateLinensGive.Name = "dateLinensGive";
             this.dateLinensGive.Size = new System.Drawing.Size(198, 20);
             this.dateLinensGive.TabIndex = 5;
-            // 
-            // comboLinensId
-            // 
-            this.comboLinensId.FormattingEnabled = true;
-            this.comboLinensId.Location = new System.Drawing.Point(118, 116);
-            this.comboLinensId.Name = "comboLinensId";
-            this.comboLinensId.Size = new System.Drawing.Size(100, 21);
-            this.comboLinensId.TabIndex = 4;
             // 
             // label8
             // 
@@ -561,7 +553,7 @@
             this.tabWatchman.Controls.Add(this.groupBox2);
             this.tabWatchman.Location = new System.Drawing.Point(4, 22);
             this.tabWatchman.Name = "tabWatchman";
-            this.tabWatchman.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabWatchman.Padding = new System.Windows.Forms.Padding(3);
             this.tabWatchman.Size = new System.Drawing.Size(1063, 561);
             this.tabWatchman.TabIndex = 4;
             this.tabWatchman.Text = "Вахтёр";
@@ -588,11 +580,12 @@
             this.groupBox6.TabIndex = 15;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Пропустить гостя";
+            this.groupBox6.Visible = false;
             // 
             // btnShowGuests
             // 
             this.btnShowGuests.Location = new System.Drawing.Point(31, 383);
-            this.btnShowGuests.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnShowGuests.Margin = new System.Windows.Forms.Padding(2);
             this.btnShowGuests.Name = "btnShowGuests";
             this.btnShowGuests.Size = new System.Drawing.Size(99, 26);
             this.btnShowGuests.TabIndex = 15;
@@ -603,7 +596,7 @@
             // btnPassGuest
             // 
             this.btnPassGuest.Location = new System.Drawing.Point(260, 168);
-            this.btnPassGuest.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPassGuest.Margin = new System.Windows.Forms.Padding(2);
             this.btnPassGuest.Name = "btnPassGuest";
             this.btnPassGuest.Size = new System.Drawing.Size(99, 26);
             this.btnPassGuest.TabIndex = 14;
@@ -716,7 +709,7 @@
             // btnPassStudent
             // 
             this.btnPassStudent.Location = new System.Drawing.Point(240, 58);
-            this.btnPassStudent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPassStudent.Margin = new System.Windows.Forms.Padding(2);
             this.btnPassStudent.Name = "btnPassStudent";
             this.btnPassStudent.Size = new System.Drawing.Size(99, 26);
             this.btnPassStudent.TabIndex = 15;
@@ -756,7 +749,7 @@
             this.tabDirector.Controls.Add(this.groupBox7);
             this.tabDirector.Location = new System.Drawing.Point(4, 22);
             this.tabDirector.Name = "tabDirector";
-            this.tabDirector.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabDirector.Padding = new System.Windows.Forms.Padding(3);
             this.tabDirector.Size = new System.Drawing.Size(1063, 561);
             this.tabDirector.TabIndex = 5;
             this.tabDirector.Text = "Заведующий общежитием";
@@ -768,9 +761,9 @@
             this.groupBox10.Controls.Add(this.tbIdKick);
             this.groupBox10.Controls.Add(this.btnKick);
             this.groupBox10.Location = new System.Drawing.Point(369, 240);
-            this.groupBox10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox10.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox10.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox10.Size = new System.Drawing.Size(398, 262);
             this.groupBox10.TabIndex = 22;
             this.groupBox10.TabStop = false;
@@ -789,7 +782,7 @@
             // tbIdKick
             // 
             this.tbIdKick.Location = new System.Drawing.Point(138, 54);
-            this.tbIdKick.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbIdKick.Margin = new System.Windows.Forms.Padding(2);
             this.tbIdKick.Name = "tbIdKick";
             this.tbIdKick.Size = new System.Drawing.Size(168, 20);
             this.tbIdKick.TabIndex = 15;
@@ -797,7 +790,7 @@
             // btnKick
             // 
             this.btnKick.Location = new System.Drawing.Point(138, 78);
-            this.btnKick.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnKick.Margin = new System.Windows.Forms.Padding(2);
             this.btnKick.Name = "btnKick";
             this.btnKick.Size = new System.Drawing.Size(166, 37);
             this.btnKick.TabIndex = 14;
@@ -813,9 +806,9 @@
             this.groupBox9.Controls.Add(this.tbSetPen);
             this.groupBox9.Controls.Add(this.comboOtrabotki);
             this.groupBox9.Location = new System.Drawing.Point(369, 5);
-            this.groupBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox9.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox9.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox9.Size = new System.Drawing.Size(398, 229);
             this.groupBox9.TabIndex = 21;
             this.groupBox9.TabStop = false;
@@ -824,7 +817,7 @@
             // btnSetPen
             // 
             this.btnSetPen.Location = new System.Drawing.Point(83, 173);
-            this.btnSetPen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSetPen.Margin = new System.Windows.Forms.Padding(2);
             this.btnSetPen.Name = "btnSetPen";
             this.btnSetPen.Size = new System.Drawing.Size(166, 37);
             this.btnSetPen.TabIndex = 14;
@@ -855,7 +848,7 @@
             // tbSetPen
             // 
             this.tbSetPen.Location = new System.Drawing.Point(83, 134);
-            this.tbSetPen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbSetPen.Margin = new System.Windows.Forms.Padding(2);
             this.tbSetPen.Name = "tbSetPen";
             this.tbSetPen.Size = new System.Drawing.Size(168, 20);
             this.tbSetPen.TabIndex = 6;
@@ -864,13 +857,14 @@
             // 
             this.comboOtrabotki.FormattingEnabled = true;
             this.comboOtrabotki.Location = new System.Drawing.Point(83, 67);
-            this.comboOtrabotki.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboOtrabotki.Margin = new System.Windows.Forms.Padding(2);
             this.comboOtrabotki.Name = "comboOtrabotki";
             this.comboOtrabotki.Size = new System.Drawing.Size(92, 21);
             this.comboOtrabotki.TabIndex = 0;
             // 
             // groupBox7
             // 
+            this.groupBox7.Controls.Add(this.dateSani);
             this.groupBox7.Controls.Add(this.dateSettle);
             this.groupBox7.Controls.Add(this.label33);
             this.groupBox7.Controls.Add(this.comboPrivName);
@@ -886,7 +880,6 @@
             this.groupBox7.Controls.Add(this.tbZavPatr);
             this.groupBox7.Controls.Add(this.tbPaycheck);
             this.groupBox7.Controls.Add(this.tbZavSurname);
-            this.groupBox7.Controls.Add(this.tbSanprop);
             this.groupBox7.Controls.Add(this.tbZavName);
             this.groupBox7.Controls.Add(this.label20);
             this.groupBox7.Controls.Add(this.label25);
@@ -895,18 +888,58 @@
             this.groupBox7.Controls.Add(this.label22);
             this.groupBox7.Controls.Add(this.label23);
             this.groupBox7.Location = new System.Drawing.Point(5, 5);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox7.Size = new System.Drawing.Size(359, 497);
             this.groupBox7.TabIndex = 20;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Поселить";
             // 
+            // dateSettle
+            // 
+            this.dateSettle.Location = new System.Drawing.Point(122, 296);
+            this.dateSettle.Name = "dateSettle";
+            this.dateSettle.Size = new System.Drawing.Size(168, 20);
+            this.dateSettle.TabIndex = 23;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(21, 296);
+            this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(63, 13);
+            this.label33.TabIndex = 22;
+            this.label33.Text = "Поселение";
+            // 
+            // comboPrivName
+            // 
+            this.comboPrivName.FormattingEnabled = true;
+            this.comboPrivName.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3"});
+            this.comboPrivName.Location = new System.Drawing.Point(122, 266);
+            this.comboPrivName.Margin = new System.Windows.Forms.Padding(2);
+            this.comboPrivName.Name = "comboPrivName";
+            this.comboPrivName.Size = new System.Drawing.Size(168, 21);
+            this.comboPrivName.TabIndex = 21;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(21, 269);
+            this.label32.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(68, 13);
+            this.label32.TabIndex = 20;
+            this.label32.Text = "Привилегии";
+            // 
             // btnSettle
             // 
             this.btnSettle.Location = new System.Drawing.Point(122, 382);
-            this.btnSettle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSettle.Margin = new System.Windows.Forms.Padding(2);
             this.btnSettle.Name = "btnSettle";
             this.btnSettle.Size = new System.Drawing.Size(166, 37);
             this.btnSettle.TabIndex = 13;
@@ -917,18 +950,20 @@
             // tbRoomNum
             // 
             this.tbRoomNum.Location = new System.Drawing.Point(122, 235);
-            this.tbRoomNum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbRoomNum.Margin = new System.Windows.Forms.Padding(2);
             this.tbRoomNum.Name = "tbRoomNum";
             this.tbRoomNum.Size = new System.Drawing.Size(168, 20);
             this.tbRoomNum.TabIndex = 19;
+            this.tbRoomNum.Text = "1";
             // 
             // tbZavStudNum
             // 
             this.tbZavStudNum.Location = new System.Drawing.Point(122, 39);
-            this.tbZavStudNum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbZavStudNum.Margin = new System.Windows.Forms.Padding(2);
             this.tbZavStudNum.Name = "tbZavStudNum";
             this.tbZavStudNum.Size = new System.Drawing.Size(168, 20);
             this.tbZavStudNum.TabIndex = 0;
+            this.tbZavStudNum.Text = "123";
             // 
             // label28
             // 
@@ -943,10 +978,11 @@
             // tbZavSpec
             // 
             this.tbZavSpec.Location = new System.Drawing.Point(122, 158);
-            this.tbZavSpec.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbZavSpec.Margin = new System.Windows.Forms.Padding(2);
             this.tbZavSpec.Name = "tbZavSpec";
             this.tbZavSpec.Size = new System.Drawing.Size(168, 20);
             this.tbZavSpec.TabIndex = 2;
+            this.tbZavSpec.Text = "спец";
             // 
             // label26
             // 
@@ -961,10 +997,11 @@
             // tbZavFac
             // 
             this.tbZavFac.Location = new System.Drawing.Point(122, 134);
-            this.tbZavFac.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbZavFac.Margin = new System.Windows.Forms.Padding(2);
             this.tbZavFac.Name = "tbZavFac";
             this.tbZavFac.Size = new System.Drawing.Size(168, 20);
             this.tbZavFac.TabIndex = 3;
+            this.tbZavFac.Text = "фак";
             // 
             // label27
             // 
@@ -979,42 +1016,38 @@
             // tbZavPatr
             // 
             this.tbZavPatr.Location = new System.Drawing.Point(122, 110);
-            this.tbZavPatr.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbZavPatr.Margin = new System.Windows.Forms.Padding(2);
             this.tbZavPatr.Name = "tbZavPatr";
             this.tbZavPatr.Size = new System.Drawing.Size(168, 20);
             this.tbZavPatr.TabIndex = 4;
+            this.tbZavPatr.Text = "отч";
             // 
             // tbPaycheck
             // 
             this.tbPaycheck.Location = new System.Drawing.Point(122, 183);
-            this.tbPaycheck.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbPaycheck.Margin = new System.Windows.Forms.Padding(2);
             this.tbPaycheck.Name = "tbPaycheck";
             this.tbPaycheck.Size = new System.Drawing.Size(168, 20);
             this.tbPaycheck.TabIndex = 15;
+            this.tbPaycheck.Text = "3452";
             // 
             // tbZavSurname
             // 
             this.tbZavSurname.Location = new System.Drawing.Point(122, 86);
-            this.tbZavSurname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbZavSurname.Margin = new System.Windows.Forms.Padding(2);
             this.tbZavSurname.Name = "tbZavSurname";
             this.tbZavSurname.Size = new System.Drawing.Size(168, 20);
             this.tbZavSurname.TabIndex = 5;
-            // 
-            // tbSanprop
-            // 
-            this.tbSanprop.Location = new System.Drawing.Point(122, 206);
-            this.tbSanprop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tbSanprop.Name = "tbSanprop";
-            this.tbSanprop.Size = new System.Drawing.Size(168, 20);
-            this.tbSanprop.TabIndex = 14;
+            this.tbZavSurname.Text = "фамилия";
             // 
             // tbZavName
             // 
             this.tbZavName.Location = new System.Drawing.Point(122, 63);
-            this.tbZavName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbZavName.Margin = new System.Windows.Forms.Padding(2);
             this.tbZavName.Name = "tbZavName";
             this.tbZavName.Size = new System.Drawing.Size(168, 20);
             this.tbZavName.TabIndex = 6;
+            this.tbZavName.Text = "имя";
             // 
             // label20
             // 
@@ -1081,7 +1114,7 @@
             this.tabReport.Controls.Add(this.groupBox8);
             this.tabReport.Location = new System.Drawing.Point(4, 22);
             this.tabReport.Name = "tabReport";
-            this.tabReport.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabReport.Padding = new System.Windows.Forms.Padding(3);
             this.tabReport.Size = new System.Drawing.Size(1063, 561);
             this.tabReport.TabIndex = 6;
             this.tabReport.Text = "Заявка о нарушении";
@@ -1101,6 +1134,13 @@
             this.groupBox8.TabIndex = 6;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Создать заявку о нарушении";
+            // 
+            // dateViolation
+            // 
+            this.dateViolation.Location = new System.Drawing.Point(41, 319);
+            this.dateViolation.Name = "dateViolation";
+            this.dateViolation.Size = new System.Drawing.Size(142, 20);
+            this.dateViolation.TabIndex = 18;
             // 
             // label13
             // 
@@ -1145,48 +1185,19 @@
             this.btnSendReport.UseVisualStyleBackColor = true;
             this.btnSendReport.Click += new System.EventHandler(this.BtnSendReport_Click);
             // 
-            // dateViolation
+            // dateSani
             // 
-            this.dateViolation.Location = new System.Drawing.Point(41, 319);
-            this.dateViolation.Name = "dateViolation";
-            this.dateViolation.Size = new System.Drawing.Size(142, 20);
-            this.dateViolation.TabIndex = 18;
+            this.dateSani.Location = new System.Drawing.Point(122, 211);
+            this.dateSani.Name = "dateSani";
+            this.dateSani.Size = new System.Drawing.Size(168, 20);
+            this.dateSani.TabIndex = 24;
             // 
-            // label32
+            // tbLinensId
             // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(21, 269);
-            this.label32.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(68, 13);
-            this.label32.TabIndex = 20;
-            this.label32.Text = "Привилегии";
-            // 
-            // comboPrivName
-            // 
-            this.comboPrivName.FormattingEnabled = true;
-            this.comboPrivName.Location = new System.Drawing.Point(122, 266);
-            this.comboPrivName.Margin = new System.Windows.Forms.Padding(2);
-            this.comboPrivName.Name = "comboPrivName";
-            this.comboPrivName.Size = new System.Drawing.Size(168, 21);
-            this.comboPrivName.TabIndex = 21;
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(21, 296);
-            this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(68, 13);
-            this.label33.TabIndex = 22;
-            this.label33.Text = "Привилегии";
-            // 
-            // dateSettle
-            // 
-            this.dateSettle.Location = new System.Drawing.Point(122, 296);
-            this.dateSettle.Name = "dateSettle";
-            this.dateSettle.Size = new System.Drawing.Size(168, 20);
-            this.dateSettle.TabIndex = 23;
+            this.tbLinensId.Location = new System.Drawing.Point(118, 117);
+            this.tbLinensId.Name = "tbLinensId";
+            this.tbLinensId.Size = new System.Drawing.Size(100, 20);
+            this.tbLinensId.TabIndex = 7;
             // 
             // Form1
             // 
@@ -1194,7 +1205,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1095, 601);
             this.Controls.Add(this.tabCon);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.tabCon.ResumeLayout(false);
@@ -1276,7 +1287,6 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Button btnGuveLinens;
         private System.Windows.Forms.DateTimePicker dateLinensGive;
-        private System.Windows.Forms.ComboBox comboLinensId;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox tbLinensStudent;
@@ -1326,7 +1336,6 @@
         private System.Windows.Forms.TextBox tbZavPatr;
         private System.Windows.Forms.TextBox tbPaycheck;
         private System.Windows.Forms.TextBox tbZavSurname;
-        private System.Windows.Forms.TextBox tbSanprop;
         private System.Windows.Forms.TextBox tbZavName;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label25;
@@ -1342,6 +1351,8 @@
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.ComboBox comboPrivName;
         private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.DateTimePicker dateSani;
+        private System.Windows.Forms.TextBox tbLinensId;
     }
 }
 
