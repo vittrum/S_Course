@@ -13,14 +13,18 @@ namespace Sofa_Course.Tables {
         public string Date_App { get; set; }
         public string Date_Comp { get; set; }
 
-        public Repairs (string id, string id_room, string type, string desc,
+        public Repairs (string id, string id_room, string desc,
             string bdate, string edate) {
             Id = id;
             Id_room = id_room;
-            Type = type;
             Desc = desc;
             Date_App = bdate;
             Date_Comp = edate;
+        }
+        public Repairs(string id, string id_room, string desc) {
+            Id = id;
+            Id_room = id_room;
+            Desc = desc;
         }
     }
 }

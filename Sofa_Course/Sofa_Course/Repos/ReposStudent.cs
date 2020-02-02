@@ -28,7 +28,7 @@ namespace Sofa_Course.Repos {
             string priv, 
             string set_date) {
             try {
-                MessageBox.Show(priv);
+                //MessageBox.Show(priv);
                 string QueryString = "select settle_student" +
                     "(@id, @name, @surname, @patr, @fac, @spec, @id_pay, '" +sanitar+ 
                     "', @id_priv, @id_room, '"+ set_date +"');";
@@ -82,6 +82,35 @@ namespace Sofa_Course.Repos {
                 NpgsqlCommand Command =
                     new NpgsqlCommand(QueryString, sqlConnection.CreateConnection.connection);
                 Command.Parameters.AddWithValue("@id", Convert.ToInt32(id));
+                NpgsqlDataReader dataReader = Command.ExecuteReader();
+                foreach (DbDataRecord dbDataRecord in dataReader) {
+                    student = new Student(
+                        dbDataRecord["id"].ToString(),
+                        dbDataRecord["name"].ToString(),
+                        dbDataRecord["surname"].ToString(),
+                        dbDataRecord["patronymic"].ToString(),
+                        dbDataRecord["faculty"].ToString(),
+                        dbDataRecord["specialty"].ToString());
+                    students.Add(student);
+                }
+                dataReader.Close();
+            }
+            catch (PostgresException ex) {
+                MessageBox.Show("Ошибка базы данных \n" + Convert.ToString(ex));
+            }
+            return students;
+        }
+
+        public List<Student> Get_Student_By_Name(string name, string surname) {
+            Student student;
+            List<Student> students = new List<Student>();
+            try {
+                string QueryString =
+                    "select * from student where name like '" + name + "%' " +
+                    "and surname like '" + surname + "%';";
+                NpgsqlCommand Command =
+                    new NpgsqlCommand(QueryString, sqlConnection.CreateConnection.connection);
+                //Command.Parameters.AddWithValue("@id", Convert.ToInt32(id));
                 NpgsqlDataReader dataReader = Command.ExecuteReader();
                 foreach (DbDataRecord dbDataRecord in dataReader) {
                     student = new Student(

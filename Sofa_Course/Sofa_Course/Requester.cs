@@ -63,16 +63,25 @@ namespace Sofa_Course {
         //
         #region student 
 
-        public void Show_Living_Students(Factory factory, DataGridView dgv) {
-
+        public void Show_Living_Students(Factory factory, DataGridView dgv, string name, string surname) {
+            foreach (var i in factory.student.Get_Student_By_Name(name, surname))
+                dgv.Rows.Add(i.ID, i.Name, i.Surname, i.Patronymic, i.Faculty, i.Specialty);
         }
 
         public void Create_Repair_Request(Factory factory, string id_stud, string repair_text) {
-
+            factory.repair.CreateRequest(id_stud, repair_text);
         }
 
-        public void Confirm_repairs (Factory factory, string id_stud, string id_repair) {
-
+        public void Confirm_repairs (Factory factory, string id_stud, string id_repair, string date) {
+            factory.repair.Confirm_request(id_repair, date);
+            MessageBox.Show(id_repair);
+            MessageBox.Show(date);
+        }
+        public void Show_Students_Request(Factory factory, DataGridView dgv, string id) {
+            foreach (var i in factory.repair.GetRepairsById(id)) {
+                //MessageBox.Show("Working in requester");
+                dgv.Rows.Add(i.Id, i.Id_room, i.Desc);
+            }
         }
 
         #endregion
@@ -80,7 +89,10 @@ namespace Sofa_Course {
         // Techpersonal
 
         public void Show_Repair_Requests(Factory factory, DataGridView dgv) {
-
+            foreach (var i in factory.repair.GetRepairs()) {
+                //MessageBox.Show("Working in requester");
+                dgv.Rows.Add(i.Id, i.Id_room, i.Desc, i.Date_App, i.Date_Comp);
+            }
         }
 
         // Остальное

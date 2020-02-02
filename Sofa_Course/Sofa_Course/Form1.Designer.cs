@@ -36,7 +36,6 @@
             this.tabStudent = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.comboMyRepairs = new System.Windows.Forms.ComboBox();
             this.btnConfirmStudent = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tbTypeOfRepair = new System.Windows.Forms.TextBox();
@@ -58,6 +57,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.dgvLinens = new System.Windows.Forms.DataGridView();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.tbLinensId = new System.Windows.Forms.TextBox();
             this.btnGuveLinens = new System.Windows.Forms.Button();
             this.dateLinensGive = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
@@ -95,6 +95,7 @@
             this.tbSetPen = new System.Windows.Forms.TextBox();
             this.comboOtrabotki = new System.Windows.Forms.ComboBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.dateSani = new System.Windows.Forms.DateTimePicker();
             this.dateSettle = new System.Windows.Forms.DateTimePicker();
             this.label33 = new System.Windows.Forms.Label();
             this.comboPrivName = new System.Windows.Forms.ComboBox();
@@ -125,8 +126,8 @@
             this.label14 = new System.Windows.Forms.Label();
             this.tbReportNum = new System.Windows.Forms.TextBox();
             this.btnSendReport = new System.Windows.Forms.Button();
-            this.dateSani = new System.Windows.Forms.DateTimePicker();
-            this.tbLinensId = new System.Windows.Forms.TextBox();
+            this.dgvStudentRequest = new System.Windows.Forms.DataGridView();
+            this.dateRequest = new System.Windows.Forms.DateTimePicker();
             this.tabCon.SuspendLayout();
             this.tabLogin.SuspendLayout();
             this.tabStudent.SuspendLayout();
@@ -150,6 +151,7 @@
             this.groupBox7.SuspendLayout();
             this.tabReport.SuspendLayout();
             this.groupBox8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStudentRequest)).BeginInit();
             this.SuspendLayout();
             // 
             // tabCon
@@ -267,12 +269,13 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.dateRequest);
+            this.groupBox4.Controls.Add(this.dgvStudentRequest);
             this.groupBox4.Controls.Add(this.label9);
-            this.groupBox4.Controls.Add(this.comboMyRepairs);
             this.groupBox4.Controls.Add(this.btnConfirmStudent);
             this.groupBox4.Location = new System.Drawing.Point(557, 6);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(216, 451);
+            this.groupBox4.Size = new System.Drawing.Size(383, 451);
             this.groupBox4.TabIndex = 7;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Утвердить ремонт";
@@ -280,23 +283,16 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(87, 161);
+            this.label9.Location = new System.Drawing.Point(28, 30);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(67, 13);
             this.label9.TabIndex = 12;
             this.label9.Text = "Мои заявки";
-            // 
-            // comboMyRepairs
-            // 
-            this.comboMyRepairs.FormattingEnabled = true;
-            this.comboMyRepairs.Location = new System.Drawing.Point(53, 193);
-            this.comboMyRepairs.Name = "comboMyRepairs";
-            this.comboMyRepairs.Size = new System.Drawing.Size(121, 21);
-            this.comboMyRepairs.TabIndex = 4;
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // btnConfirmStudent
             // 
-            this.btnConfirmStudent.Location = new System.Drawing.Point(53, 374);
+            this.btnConfirmStudent.Location = new System.Drawing.Point(31, 281);
             this.btnConfirmStudent.Name = "btnConfirmStudent";
             this.btnConfirmStudent.Size = new System.Drawing.Size(97, 42);
             this.btnConfirmStudent.TabIndex = 3;
@@ -504,6 +500,13 @@
             this.groupBox5.TabIndex = 0;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Выдать бельё";
+            // 
+            // tbLinensId
+            // 
+            this.tbLinensId.Location = new System.Drawing.Point(118, 117);
+            this.tbLinensId.Name = "tbLinensId";
+            this.tbLinensId.Size = new System.Drawing.Size(100, 20);
+            this.tbLinensId.TabIndex = 7;
             // 
             // btnGuveLinens
             // 
@@ -896,6 +899,13 @@
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Поселить";
             // 
+            // dateSani
+            // 
+            this.dateSani.Location = new System.Drawing.Point(122, 211);
+            this.dateSani.Name = "dateSani";
+            this.dateSani.Size = new System.Drawing.Size(168, 20);
+            this.dateSani.TabIndex = 24;
+            // 
             // dateSettle
             // 
             this.dateSettle.Location = new System.Drawing.Point(122, 296);
@@ -1185,19 +1195,21 @@
             this.btnSendReport.UseVisualStyleBackColor = true;
             this.btnSendReport.Click += new System.EventHandler(this.BtnSendReport_Click);
             // 
-            // dateSani
+            // dgvStudentRequest
             // 
-            this.dateSani.Location = new System.Drawing.Point(122, 211);
-            this.dateSani.Name = "dateSani";
-            this.dateSani.Size = new System.Drawing.Size(168, 20);
-            this.dateSani.TabIndex = 24;
+            this.dgvStudentRequest.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStudentRequest.Location = new System.Drawing.Point(31, 56);
+            this.dgvStudentRequest.Name = "dgvStudentRequest";
+            this.dgvStudentRequest.RowHeadersWidth = 51;
+            this.dgvStudentRequest.Size = new System.Drawing.Size(330, 174);
+            this.dgvStudentRequest.TabIndex = 15;
             // 
-            // tbLinensId
+            // dateRequest
             // 
-            this.tbLinensId.Location = new System.Drawing.Point(118, 117);
-            this.tbLinensId.Name = "tbLinensId";
-            this.tbLinensId.Size = new System.Drawing.Size(100, 20);
-            this.tbLinensId.TabIndex = 7;
+            this.dateRequest.Location = new System.Drawing.Point(31, 245);
+            this.dateRequest.Name = "dateRequest";
+            this.dateRequest.Size = new System.Drawing.Size(200, 20);
+            this.dateRequest.TabIndex = 16;
             // 
             // Form1
             // 
@@ -1243,6 +1255,7 @@
             this.tabReport.ResumeLayout(false);
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStudentRequest)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1274,7 +1287,6 @@
         private System.Windows.Forms.DataGridView dgvShowStudents;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboMyRepairs;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox tbTypeOfRepair;
         private System.Windows.Forms.Label label11;
@@ -1353,6 +1365,8 @@
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.DateTimePicker dateSani;
         private System.Windows.Forms.TextBox tbLinensId;
+        private System.Windows.Forms.DataGridView dgvStudentRequest;
+        private System.Windows.Forms.DateTimePicker dateRequest;
     }
 }
 

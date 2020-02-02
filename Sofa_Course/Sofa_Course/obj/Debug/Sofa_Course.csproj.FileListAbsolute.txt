@@ -1,8 +1,8 @@
-C:\Users\vittrum\Desktop\Sofa_Course\Sofa_Course\Sofa_Course\obj\Debug\Sofa_Course.csprojAssemblyReference.cache
-C:\Users\vittrum\Desktop\Sofa_Course\Sofa_Course\Sofa_Course\obj\Debug\Sofa_Course.Form1.resources
-C:\Users\vittrum\Desktop\Sofa_Course\Sofa_Course\Sofa_Course\obj\Debug\Sofa_Course.Properties.Resources.resources
-C:\Users\vittrum\Desktop\Sofa_Course\Sofa_Course\Sofa_Course\obj\Debug\Sofa_Course.csproj.GenerateResource.cache
-C:\Users\vittrum\Desktop\Sofa_Course\Sofa_Course\Sofa_Course\bin\Debug\Sofa_Course.exe.config
+c:\Users\vittrum\Desktop\Sofa_Course\Sofa_Course\Sofa_Course\bin\Debug\Sofa_Course.exe.config
+c:\Users\vittrum\Desktop\Sofa_Course\Sofa_Course\Sofa_Course\obj\Debug\Sofa_Course.csprojAssemblyReference.cache
+c:\Users\vittrum\Desktop\Sofa_Course\Sofa_Course\Sofa_Course\obj\Debug\Sofa_Course.Form1.resources
+c:\Users\vittrum\Desktop\Sofa_Course\Sofa_Course\Sofa_Course\obj\Debug\Sofa_Course.Properties.Resources.resources
+c:\Users\vittrum\Desktop\Sofa_Course\Sofa_Course\Sofa_Course\obj\Debug\Sofa_Course.csproj.GenerateResource.cache
 C:\Users\vittrum\Desktop\Sofa_Course\Sofa_Course\Sofa_Course\bin\Debug\Sofa_Course.exe
 C:\Users\vittrum\Desktop\Sofa_Course\Sofa_Course\Sofa_Course\bin\Debug\Sofa_Course.pdb
 C:\Users\vittrum\Desktop\Sofa_Course\Sofa_Course\Sofa_Course\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll

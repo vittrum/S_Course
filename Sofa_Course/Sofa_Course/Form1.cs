@@ -12,22 +12,31 @@ namespace Sofa_Course {
     public partial class Form1 : Form {
         public Form1() {
             InitializeComponent();
+            Init();
         }
-
+        private void Init() {
+            FillDgvStaffRequests2();
+            requester.Show_Students_Request(factory, dgvStudentRequest, login);
+        }
         Requester requester = new Requester();
         Factory factory = new Factory("127.0.0.1", "5432", "postgres", "1", "sofa");
-        string login;
+        string login = "201";
 
         #region Student
         private void BtnShowStudents_Click(object sender, EventArgs e) {
             FillDgvStudents();
-            requester.Show_Living_Students(factory, dgvShowStudents);
+            requester.Show_Living_Students(factory, dgvShowStudents, tbNameStudent.Text, tbSurnameStudent.Text);
         }
         private void BtnCreateRequestStudent_Click(object sender, EventArgs e) {
             requester.Create_Repair_Request(factory, login, tbTypeOfRepair.Text);
+            FillDgvStaffRequests2();
+            requester.Show_Students_Request(factory, dgvStudentRequest, login);
         }
         private void BtnConfirmStudent_Click(object sender, EventArgs e) {
-            requester.Confirm_repairs(factory, login, comboMyRepairs.SelectedItem.ToString());
+            foreach (DataGridViewRow row in dgvStudentRequest.SelectedRows) {
+                requester.Confirm_repairs(factory, login, row.Cells["id_req"].Value.ToString(), dateRequest.Value.ToShortDateString());
+                dgvStudentRequest.Rows.Remove(row);
+            }
         }
         #endregion
 
@@ -47,10 +56,17 @@ namespace Sofa_Course {
             dgvStaffShowRequests.Columns.Clear();
             dgvStaffShowRequests.Columns.Add("id_req", "Номер заявки");
             dgvStaffShowRequests.Columns.Add("id_room", "Номер комнаты");
-            dgvStaffShowRequests.Columns.Add("type", "Тип работ");
             dgvStaffShowRequests.Columns.Add("text", "Тема");
             dgvStaffShowRequests.Columns.Add("dateb", "Дата подачи");
             dgvStaffShowRequests.Columns.Add("datee", "Дата вып");
+        }
+        public void FillDgvStaffRequests2() {
+            dgvStudentRequest.Columns.Clear();
+            dgvStudentRequest.Columns.Add("id_req", "Номер заявки");
+            dgvStudentRequest.Columns.Add("id_room", "Номер комнаты");
+            dgvStudentRequest.Columns.Add("text", "Тема");
+            dgvStudentRequest.Columns.Add("dateb", "Дата подачи");
+            dgvStudentRequest.Columns.Add("datee", "Дата вып");
         }
 
         public void FillDgvLinens() {
@@ -150,6 +166,8 @@ namespace Sofa_Course {
             requester.Send_Report(factory, tbReportNum.Text, tbTextReport.Text, dateViolation.Value.ToShortDateString());
         }
 
-        
+        private void label9_Click(object sender, EventArgs e) {
+
+        }
     }
 }

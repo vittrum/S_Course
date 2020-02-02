@@ -1,0 +1,15 @@
+insert into privileges (id, type, description)
+values (1, 'первая', 'первая-описание');
+insert into privileges (id, type, description)
+values (2, 'вторая', 'вторая-описание');
+insert into privileges (id, type, description)
+values (3, 'третья', 'третья-описание');
+
+insert into room (room_capacity)
+values (3);
+insert into room (room_capacity)
+values (5);
+insert into room (room_capacity)
+values (4);
+insert into room (room_capacity)
+values (4);
