@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Common;
 using Npgsql;
@@ -41,12 +38,11 @@ namespace Sofa_Course.Repos {
         public void GiveLinens(string id, string stud, string date) {
             try {
                 string QueryString = "update linens_set " +
-                    "set id_student = @id_stud, date_of_issue = '" + date+ 
-                    "'" +
+                    "set id_student = @id_stud, date_of_issue = '"+date+"' " +
                     "where id = @id;";
                 NpgsqlCommand Command =
                     new NpgsqlCommand(QueryString, sqlConnection.CreateConnection.connection);
-                Command.Parameters.AddWithValue("@date", date);
+                //Command.Parameters.AddWithValue("@date", date);
                 Command.Parameters.AddWithValue("@id", Convert.ToInt32(id));
                 Command.Parameters.AddWithValue("@id_stud", Convert.ToInt32(stud));
                 try {
@@ -64,7 +60,7 @@ namespace Sofa_Course.Repos {
             try {
                 MessageBox.Show(id);
                 string QueryString = "update linens_set " +
-                    "set id_student = null, date_of_issue = null"+
+                    "set id_student = null, date_of_issue = null "+
                     "where id = @id;";
                 NpgsqlCommand Command =
                     new NpgsqlCommand(QueryString, sqlConnection.CreateConnection.connection);

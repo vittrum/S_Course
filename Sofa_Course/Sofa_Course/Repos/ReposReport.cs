@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Npgsql;
 using System.Windows.Forms;
+using Sofa_Course.Tables;
+using System.Data.Common;
 
 namespace Sofa_Course.Repos {
     class ReposReport {
@@ -12,7 +14,29 @@ namespace Sofa_Course.Repos {
         public ReposReport(Connection sqlConnection) {
             this.sqlConnection = sqlConnection;
         }
-
+        /*public List<Report> GetViolation() {
+            Report report;
+            List<Report> reports = new List<Report>();
+            try {
+                string QueryString =
+                    "select * from violations";
+                NpgsqlCommand Command =
+                    new NpgsqlCommand(QueryString, sqlConnection.CreateConnection.connection);
+                NpgsqlDataReader dataReader = Command.ExecuteReader();
+                foreach (DbDataRecord dbDataRecord in dataReader) {
+                    report = new Report(
+                        dbDataRecord["id"].ToString(),
+                        dbDataRecord["date_violation"].ToString(),
+                        dbDataRecord["date_of_issue"].ToString());
+                    reports.Add(report);
+                }
+                dataReader.Close();
+            }
+            catch (PostgresException ex) {
+                MessageBox.Show("Ошибка базы данных \n" + Convert.ToString(ex));
+            }
+            return linenses;
+        }*/
         public void CreateReport(string stud_id, string text, string date) {
             try {
                 string QueryString = "select create_violation('"+date+"', 'нарушение', @id_stud, @text);";

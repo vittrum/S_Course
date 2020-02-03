@@ -16,6 +16,8 @@ namespace Sofa_Course {
         }
         private void Init() {
             FillDgvStaffRequests2();
+            FillDgvLinens();
+            requester.GetLinens(factory, dgvLinens);
             requester.Show_Students_Request(factory, dgvStudentRequest, login);
         }
         Requester requester = new Requester();

@@ -24,7 +24,7 @@ namespace Sofa_Course {
             factory.report.SetPenalty(id_pen, type);
         }
         #endregion 
-        // 1?????????
+        // 
         #region vachter
 
         public void Pass_student (Factory factory, DataGridView dgv, string id_stud) {
@@ -87,7 +87,6 @@ namespace Sofa_Course {
         #endregion
 
         // Techpersonal
-
         public void Show_Repair_Requests(Factory factory, DataGridView dgv) {
             foreach (var i in factory.repair.GetRepairs()) {
                 //MessageBox.Show("Working in requester");
@@ -99,11 +98,5 @@ namespace Sofa_Course {
         public void Send_Report (Factory factory, string id_stud, string text, string date) {
             factory.report.CreateReport(id_stud, text, date);
         }
-
-        public void Show_Guests(Factory factory, DataGridView dgv) {
-
-        }
-
-
     }
 }
