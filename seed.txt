@@ -1,0 +1,16 @@
+insert into rooms (places) values (3);
+insert into rooms (places) values (4);
+insert into rooms (places) values (4);
+insert into rooms (places) values (3);
+insert into rooms (places) values (3);
+
+insert into categories (type) values ('no bonuses');
+insert into categories (type) values ('first');
+insert into categories (type) values ('second');
+insert into categories (type) values ('third');
+
+select settle_student('name', 'last', 'father', 2, 'CE', 'invoice', 'sanpass', 1, 1);
+insert into linens (grant_date, student_id) values (current_date, 1);
+update linens
+set revoke_date = current_date
+where student_id = 1;

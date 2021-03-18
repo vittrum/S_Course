@@ -1,0 +1,100 @@
+-----------------ÑÎÎÁÙÈÒÜ Î ÍÀĞÓØÅÍÈÈ-----------------------------------------
+create or replace function create_violation
+(_date date, _type varchar, id_stud int, fact varchar)
+returns void as $$
+declare _id int;
+begin 
+	insert into violation ("date", "type")
+	values (_date, _type);
+	_id = (select max(id) from violation);
+	insert into violators (student_id, violation_id, fact)
+	values (id_stud, _id, fact);
+end $$
+	language 'plpgsql';
+
+-----------------ÏÎÑÅËÈÒÜ ÑÒÓÄÅÍÒÀ---------------------------
+create or replace function settle_student
+(
+	_name char(30),
+	_lastname char(30),
+	_father_name char(30),
+	_course int,
+	_specialty char(100),
+	_invoice text, 
+	_sanitary_pass text,
+	_category_id int,
+	_room_id int
+)
+returns void as $$
+declare _id int;
+begin
+	insert into students (name, lastname, father_name, 
+						  course, specialty, invoice, 
+						  sanitary_pass, category_id)
+			values (_name, _lastname, _father_name, 
+						  _course, _specialty, _invoice, 
+						  _sanitary_pass, _category_id);
+	_id = (select max(id) from students);
+	insert into room_student (settlement_date, room_id, student_id)
+	values (current_date, _room_id, _id);
+end $$
+	language 'plpgsql';
+
+-----------------ÂÛÑÅËÈÒÜ ÑÒÓÄÅÍÒÀ----------------------------
+update room_student
+set eviction_date = current_date
+where id = 2
+
+-----------------ÍÀÇÍÀ×ÈÒÜ ÎÒĞÀÁÎÒÊÓ--------------------------
+update violations
+set penalty = 'text'
+where id = 2;
+
+_________________ÂÀÕÒÅĞ_______________________________________
+-----------------ÏĞÎÏÓÑÒÈÒÜ ÑÒÓÄÅÍÒÀ--------------------------
+select * from students where
+name = 'name' and
+lastname = 'lastname'
+
+-----------------ÏĞÎÏÓÑÒÈÒÜ ÃÎÑÒß ÑÒÓÄÅÍÒÀ--------------------
+insert into guests(name, lastname, father_name, 
+				   registration_adress, visit_date, 
+				   arrival_time, room_id)
+values ('name', 'lastname', 'father_name', 
+		'adress', current_date, localtimestamp, 2);
+
+_________________ÇÀÂÕÎÇ_______________________________________
+-----------------ÂÛÄÀÒÜ ÁÅËÜÅ---------------------------------
+insert into linens (grant_date, student_id) 
+values (current_date, 1);
+
+-----------------ÏĞÈÍßÒÜ ÁÅËÜÅ--------------------------------
+update linens
+set revoke_date = current_date
+where student_id = 1;
+
+_________________ÑÒÓÄÅÍÒ______________________________________
+-----------------ÏĞÎÑÌÎÒĞÅÒÜ ÑÒÓÄÅÍÒÎÂ------------------------
+select s.name, s.lastname, s.course, s.specialty, rs.id as room_num
+from students as s, room_student as rs
+where s.id = rs.student_id;
+
+-----------------ÏÎÄÀÒÜ ÇÀßÂÊÓ ÍÀ ĞÅÌÎÍÒ----------------------
+create function create_repair_request
+(_student_id int, _type char(100), _theme char(100))
+returns void as $$
+declare _room_id int;
+begin 
+	_room_id = (select id from room_student where student_id = _student_id);
+	insert into repair_request("type", "theme", "request_date", "room_student_id")
+	values (_type, _theme, current_date, _room_id);
+end $$
+	language 'plpgsql';
+
+-----------------ÏÎÄÒÂÅĞÄÈÒÜ ĞÅÌÎÍÒ---------------------------
+update repair_request
+set repair_date = current_date
+where id = 2;
+_________________ÒÅÕÏÅĞÑÎÍÀË__________________________________
+-----------------ÏÎÑÌÎÒĞÅÒÜ ÑÏÈÑÎÊ ÇÀßÂÎÊ ÍÀ ĞÅÌÎÍÒ-----------
+select * from repair_request;

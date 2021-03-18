@@ -31,7 +31,7 @@ create table students
 	lastname char(30) not null,
 	father_name char(30),
 	course int default 1 check (course<=6),
-						 check (course>0),
+				check (course>0),
 	specialty char(100) not null,
 	invoice text default 'not payed',
 	sanitary_pass text default 'not verified',
@@ -51,7 +51,7 @@ create table room_student
 		on update cascade 
 		on delete restrict	
 );
-create table guest
+create table guests
 (
 	id serial primary key,
 	name char(30) not null,
@@ -60,7 +60,10 @@ create table guest
 	registration_adress	char(70) not null,
 	visit_date date not null,
 	arrival_time timestamp not null,
-	departure_time timestamp default null
+	departure_time timestamp default null,
+	room_id int not null references rooms(id)
+		on update cascade
+		on delete restrict
 );
 create table repair_request
 (
@@ -81,4 +84,15 @@ create table linens
 	student_id int not null references students(id)
 		on update cascade
 		on delete restrict
+);
+create table violation_student
+(
+	id serial primary key,
+	fact text,
+	student_id int not null references students(id)
+		on update cascade
+		on delete restrict,
+	violation_id int not null references violations(id)
+		on update cascade
+		on delete restrict	
 );
