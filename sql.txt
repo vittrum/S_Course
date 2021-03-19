@@ -61,7 +61,7 @@ insert into guests(name, lastname, father_name,
 				   registration_adress, visit_date, 
 				   arrival_time, room_id)
 values ('name', 'lastname', 'father_name', 
-		'adress', current_date, localtimestamp, 2);
+		'adress', current_date, localtime, 2);
 
 _________________ÇÀÂÕÎÇ_______________________________________
 -----------------ÂÛÄÀÒÜ ÁÅËÜÅ---------------------------------
@@ -98,3 +98,27 @@ where id = 2;
 _________________ÒÅÕÏÅĞÑÎÍÀË__________________________________
 -----------------ÏÎÑÌÎÒĞÅÒÜ ÑÏÈÑÎÊ ÇÀßÂÎÊ ÍÀ ĞÅÌÎÍÒ-----------
 select * from repair_request;
+
+_________________ÒĞÈÃÃÅĞ ÄËß ÏĞÎÂÅĞÊÈ ÏÎÑÅÒÈÒÅËÅÉ_____________
+create or replace function check_visit_time() returns trigger as $$
+	begin 
+		if new.arrival_time > '20:00:00' then
+			raise exception 'No visitors after eight!';
+		end if;
+		return new;
+	end;
+$$ language 'plpgsql';
+
+create trigger check_visit_time before insert or update on guests
+	for each row execute procedure check_visit_time();
+
+_______ÏĞÅÄÑÒÀÂËÅÍÈÅ È ÇÀÏĞÎÑ ÄËß ÎÒÑËÅÆÈÂÀÍÈß ÏÓÑÒÛÕ ÊÎÌÍÀÒ___
+create or replace view taken_places as
+select r.id, count(rs.room_id) as places_taken
+from rooms as r left join room_student as rs on r.id = rs.room_id
+where rs.eviction_date is null and rs.settlement_date is not null
+group by r.id
+order by r.id;
+
+select r.id from rooms as r left join taken_places as tp on r.id = tp.id
+where tp.places_taken < r.places or places_taken is null;
