@@ -6,9 +6,9 @@ using Npgsql;
 using Sofa_Course.Tables;
 
 namespace Sofa_Course.Repos {
-    class ReposLinens {
+    class ReposCaretaker {
         private Connection sqlConnection;
-        public ReposLinens(Connection sqlConnection) {
+        public ReposCaretaker(Connection sqlConnection) {
             this.sqlConnection = sqlConnection;
         }
 

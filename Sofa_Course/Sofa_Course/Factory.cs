@@ -11,12 +11,12 @@ namespace Sofa_Course {
         public NpgsqlConnection NpgsqlConnection;
         public Connection SqlConnection;
 
+        public ReposAdmin admin { get; }
+        public ReposCaretaker caretaker { get; }
+        public ReposStaff staff { get; }
         public ReposStudent student { get; }
-        public ReposGuest guest { get; }
-        public ReposReport report { get; }
-        public ReposLinens linens { get; }
-        public ReposRepair repair { get; }
-        
+        public ReposViolation violation { get; }
+        public ReposWatchman watchman { get; }
 
         private bool Disposed = false;
 
@@ -25,11 +25,12 @@ namespace Sofa_Course {
             NpgsqlConnection = new NpgsqlConnection(ConnectionString);
             SqlConnection = new Connection(NpgsqlConnection);
             OpenConnection();
-            guest = new ReposGuest(SqlConnection);
+            caretaker = new ReposCaretaker(SqlConnection);
+            admin = new ReposAdmin(SqlConnection);
+            staff = new ReposStaff(SqlConnection);
             student = new ReposStudent(SqlConnection);
-            report = new ReposReport(SqlConnection);
-            linens = new ReposLinens(SqlConnection);
-            repair = new ReposRepair(SqlConnection);
+            violation = new ReposViolation(SqlConnection);
+            watchman = new ReposWatchman(SqlConnection);
         }
 
         public void OpenConnection() {

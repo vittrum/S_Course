@@ -12,6 +12,7 @@ begin
 end $$
 	language 'plpgsql';
 
+_________________гюбедсчыхи наыефхрхел_______________________
 -----------------оняекхрэ ярсдемрю---------------------------
 create or replace function settle_student
 (
@@ -122,3 +123,9 @@ order by r.id;
 
 select r.id from rooms as r left join taken_places as tp on r.id = tp.id
 where tp.places_taken < r.places or places_taken is null;
+
+_______опедярюбкемхе дкъ опнялнрпю аекэъ________________________
+create or replace view linens_set as 
+select l.id as linens_num, l.grant_date, l.revoke_date, s.id as stundent_num, s.name, s.lastname
+from linens as l, students as s
+where l.student_id = s.id;

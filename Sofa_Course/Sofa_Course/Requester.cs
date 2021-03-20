@@ -10,93 +10,89 @@ using System.Windows.Forms;
 namespace Sofa_Course {
     class Requester {
         //++
-        #region zaveduyschii
-        public void Settle_Student(Factory factory, string name, string surname,
-            string patronymic, string id, string id_pay, string sanitar, string id_room,
-            string fac, string spec, string priv, string set_date) {
-            factory.student.Settle_Student(name, surname, patronymic, id, id_pay, sanitar,
-                id_room, fac, spec, priv, set_date);
+        #region admin
+        public void SettleStudent(Factory factory, string name, string lastname,
+            string father_name, int course, string specialty, string invoice,
+            string sanpass, int category, int room
+            ) {
+            factory.student.SettleStudent(
+                    name,
+                    lastname,
+                    father_name,
+                    course,
+                    specialty,
+                    invoice,
+                    sanpass,
+                    category,
+                    room);
         }
-        public void Kick_Student(Factory factory, string id_stud) {
-            factory.student.Kick_Student(id_stud);
+        public void KickStudent(Factory factory, string student_id) {
+            //factory.student.Kick_Student(id_stud);
         }
-        public void Set_Penalty(Factory factory, string id_pen, string type) {
-            factory.report.SetPenalty(id_pen, type);
+        public void SetPenalty(Factory factory, string violation_id, string penalty) {
+            //factory.report.SetPenalty(id_pen, type);
         }
         #endregion 
         // 
-        #region vachter
-
-        public void Pass_student (Factory factory, DataGridView dgv, string id_stud) {
-            foreach (var i in factory.student.Get_Student_By_Pass(id_stud))
-                dgv.Rows.Add(i.ID, i.Name, i.Surname, i.Patronymic, i.Faculty, i.Specialty);            
+        #region watchman
+        public void PassStudent (Factory factory, DataGridView dgv, string name, string lastname) {   
+            //
         }
-        /*
-        public void Pass_Guest (Factory factory, string id_stud, string name, 
-            string surname, string patronymic, string place) {
+        
+        public void PassGuest (Factory factory, string name, 
+            string lastname, string father_name, string adress, string room_id) {
             //factory.guest
         }
-        public void Leave_Guest (Factory factory, string leavetime, string id_visit) {
-
-        }*/
-        public void Create_Violation (Factory factory, string id_stud, string type, 
-            string date) {
-
-        }
+        
         #endregion
         //
-        #region zavchoz
+        #region caretaker
 
-        public void Give_Linens(Factory factory, string id_stud, string id_linens, string date) {
-            factory.linens.GiveLinens(id_linens, id_stud, date);
+        public void GiveLinens(Factory factory, string student_id, string linens_id) {
+            //factory.linens.GiveLinens(id_linens, id_stud, date);
         }
 
-        public void Return_Linens(Factory factory, string id_linens) {
-            factory.linens.ReturnLinens(id_linens);
+        public void ReturnLinens(Factory factory, string linens_id) {
+           // factory.linens.ReturnLinens(id_linens);
         }
 
         public void GetLinens(Factory factory, DataGridView dgv) {
-            foreach (var i in factory.linens.GetLinens())
-                dgv.Rows.Add(i.Id, i.Id_stud, i.Date);
+            //
         }
         #endregion
         //
         #region student 
 
-        public void Show_Living_Students(Factory factory, DataGridView dgv, string name, string surname) {
-            foreach (var i in factory.student.Get_Student_By_Name(name, surname))
-                dgv.Rows.Add(i.ID, i.Name, i.Surname, i.Patronymic, i.Faculty, i.Specialty);
+        public void ShowLivingStudents(Factory factory, DataGridView dgv, string course, string specialty) {
+            //foreach (var i in factory.student.Get_Student_By_Name(name, surname))
+            //    dgv.Rows.Add(i.ID, i.Name, i.Lastname, i.FatherName, i.Faculty, i.Specialty);
         }
 
-        public void Create_Repair_Request(Factory factory, string id_stud, string repair_text) {
-            factory.repair.CreateRequest(id_stud, repair_text);
+        public void CreateRepairRequest(Factory factory, string stud_id, string repair_text, string type) {
+            //factory.repair.CreateRequest(id_stud, repair_text);
         }
 
-        public void Confirm_repairs (Factory factory, string id_stud, string id_repair, string date) {
-            factory.repair.Confirm_request(id_repair, date);
-            MessageBox.Show(id_repair);
-            MessageBox.Show(date);
+        public void ConfirmRepairs (Factory factory, string repair_id) {
+            //factory.repair.Confirm_request(id_repair, date);
         }
-        public void Show_Students_Request(Factory factory, DataGridView dgv, string id) {
-            foreach (var i in factory.repair.GetRepairsById(id)) {
-                //MessageBox.Show("Working in requester");
-                dgv.Rows.Add(i.Id, i.Id_room, i.Desc);
-            }
+        
+        public void ShowStudentsRequest(Factory factory, DataGridView dgv, string stud_id) {
+            
         }
 
         #endregion
 
         // Techpersonal
-        public void Show_Repair_Requests(Factory factory, DataGridView dgv) {
-            foreach (var i in factory.repair.GetRepairs()) {
-                //MessageBox.Show("Working in requester");
-                dgv.Rows.Add(i.Id, i.Id_room, i.Desc, i.Date_App, i.Date_Comp);
-            }
+        public void ShowRepairRequests(Factory factory, DataGridView dgv) {
+            //foreach (var i in factory.repair.GetRepairs()) {
+            //    //MessageBox.Show("Working in requester");
+            //    dgv.Rows.Add(i.Id, i.Id_room, i.Desc, i.Date_App, i.Date_Comp);
+            //}
         }
 
-        // Остальное
-        public void Send_Report (Factory factory, string id_stud, string text, string date) {
-            factory.report.CreateReport(id_stud, text, date);
+        public void CreateViolation(Factory factory, string id_stud, string type, string fact)
+        {
+
         }
     }
 }

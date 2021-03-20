@@ -18,7 +18,7 @@ namespace Sofa_Course {
             FillDgvStaffRequests2();
             FillDgvLinens();
             requester.GetLinens(factory, dgvLinens);
-            requester.Show_Students_Request(factory, dgvStudentRequest, login);
+            requester.ShowStudentsRequest(factory, dgvStudentRequest, login);
         }
         Requester requester = new Requester();
         Factory factory = new Factory("127.0.0.1", "5432", "postgres", "1", "sofa");
@@ -26,13 +26,15 @@ namespace Sofa_Course {
 
         #region Student
         private void BtnShowStudents_Click(object sender, EventArgs e) {
-            FillDgvStudents();
-            requester.Show_Living_Students(factory, dgvShowStudents, tbNameStudent.Text, tbSurnameStudent.Text);
+            FillDgvStudentsShort(dgvShowStudents);
+            requester.ShowLivingStudents(factory, dgvShowStudents, 
+                ComboStudCourse.SelectedItem.ToString(), 
+                ComboStudSpec.SelectedItem.ToString());
         }
         private void BtnCreateRequestStudent_Click(object sender, EventArgs e) {
-            requester.Create_Repair_Request(factory, login, tbTypeOfRepair.Text);
+            requester.CreateRepairRequest(factory, login, tbTypeOfRepair.Text);
             FillDgvStaffRequests2();
-            requester.Show_Students_Request(factory, dgvStudentRequest, login);
+            requester.ShowStudentsRequest(factory, dgvStudentRequest, login);
         }
         private void BtnConfirmStudent_Click(object sender, EventArgs e) {
             foreach (DataGridViewRow row in dgvStudentRequest.SelectedRows) {
@@ -44,14 +46,14 @@ namespace Sofa_Course {
 
         #region DgvFill
 
-        public void FillDgvStudents() {
-            dgvShowStudents.Columns.Clear();
-            dgvShowStudents.Columns.Add("id", "Номер");
-            dgvShowStudents.Columns.Add("name", "Имя");
-            dgvShowStudents.Columns.Add("lastname", "Фамилия");
-            dgvShowStudents.Columns.Add("patr", "Отчество");
-            dgvShowStudents.Columns.Add("fac", "Факультет");
-            dgvShowStudents.Columns.Add("spec", "Специальность");
+        public void FillDgvStudentsShort(DataGridView dgv) {
+            dgv.Columns.Clear();
+            dgv.Columns.Add("id", "Номер");
+            dgv.Columns.Add("name", "Имя");
+            dgv.Columns.Add("lastname", "Фамилия");
+            dgv.Columns.Add("patr", "Отчество");
+            dgv.Columns.Add("fac", "Факультет");
+            dgv.Columns.Add("spec", "Специальность");
         }
 
         public void FillDgvStaffRequests() {
@@ -80,13 +82,13 @@ namespace Sofa_Course {
         }
 
         public void FillDgvWatcher() {
-            dgvWatchIdFind.Columns.Clear();
-            dgvWatchIdFind.Columns.Add("id", "Номер");
-            dgvWatchIdFind.Columns.Add("name", "Имя");
-            dgvWatchIdFind.Columns.Add("lastname", "Фамилия");
-            dgvWatchIdFind.Columns.Add("patr", "Отчество");
-            dgvWatchIdFind.Columns.Add("fac", "Факультет");
-            dgvWatchIdFind.Columns.Add("spec", "Специальность");
+            dgvWatchFind.Columns.Clear();
+            dgvWatchFind.Columns.Add("id", "Номер");
+            dgvWatchFind.Columns.Add("name", "Имя");
+            dgvWatchFind.Columns.Add("lastname", "Фамилия");
+            dgvWatchFind.Columns.Add("patr", "Отчество");
+            dgvWatchFind.Columns.Add("fac", "Факультет");
+            dgvWatchFind.Columns.Add("spec", "Специальность");
         }
 
         public void FillDgvWatchGuests() {
@@ -104,7 +106,7 @@ namespace Sofa_Course {
         // Техперсонал
         private void BtnStaffRefresh_Click(object sender, EventArgs e) {
             FillDgvStaffRequests();
-            requester.Show_Repair_Requests(factory, dgvStaffShowRequests);
+            requester.ShowRepairRequests(factory, dgvStaffShowRequests);
         }
         // Завхоз
         private void BtnGuveLinens_Click(object sender, EventArgs e) {
@@ -117,14 +119,14 @@ namespace Sofa_Course {
 
         private void BtnGetLinens_Click(object sender, EventArgs e) {
             foreach (DataGridViewRow row in dgvLinens.SelectedRows)
-                requester.Return_Linens(factory, row.Cells["id_lin"].Value.ToString());
+                requester.ReturnLinens(factory, row.Cells["id_lin"].Value.ToString());
             FillDgvLinens();
             requester.GetLinens(factory, dgvLinens);
         }
         // Вахтёр
         private void BtnPassStudent_Click(object sender, EventArgs e) {
             FillDgvWatcher();
-            requester.Pass_student(factory, dgvWatchIdFind, tbWatchIdFind.Text);
+            requester.PassStudent(factory, dgvWatchFind, tbWatchIdFind.Text);
             
             //requester.Show_Living_Students(factory, dgvWatchIdFind);
         }
@@ -142,7 +144,7 @@ namespace Sofa_Course {
         }
         #region Zaveduyuschii
         private void BtnSettle_Click(object sender, EventArgs e) {
-            requester.Settle_Student(factory, 
+            requester.SettleStudent(factory, 
                 tbZavName.Text, 
                 tbZavSurname.Text,
                 tbZavPatr.Text,

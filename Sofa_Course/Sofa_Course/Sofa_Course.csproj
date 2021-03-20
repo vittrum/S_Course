@@ -87,11 +87,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repos\ReposGuest.cs" />
-    <Compile Include="Repos\ReposLinens.cs" />
-    <Compile Include="Repos\ReposRepair.cs" />
-    <Compile Include="Repos\ReposReport.cs" />
+    <Compile Include="Repos\ReposAdmin.cs" />
+    <Compile Include="Repos\ReposCaretaker.cs" />
+    <Compile Include="Repos\ReposStaff.cs" />
     <Compile Include="Repos\ReposStudent.cs" />
+    <Compile Include="Repos\ReposViolation.cs" />
+    <Compile Include="Repos\ReposWatchman.cs" />
     <Compile Include="Requester.cs" />
     <Compile Include="Tables\Guest.cs" />
     <Compile Include="Tables\Linens.cs" />

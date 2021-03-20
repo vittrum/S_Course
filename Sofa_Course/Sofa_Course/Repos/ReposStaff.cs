@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Sofa_Course.Repos
 {
-    class ReposStudent
+    class ReposStaff
     {
         private Connection sqlConnection;
-        public ReposStudent(Connection sqlConnection)
+        public ReposStaff(Connection sqlConnection)
         {
             this.sqlConnection = sqlConnection;
         }
