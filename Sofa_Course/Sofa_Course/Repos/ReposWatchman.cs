@@ -21,7 +21,15 @@ namespace Sofa_Course.Repos
             Student student;
             List<Student> students = new List<Student>();
             try {
-                string QueryString ="select * from students where name = @name and lastname = @lastname;";
+                string QueryString ="select * from students where id = id ";
+                if (name != "")
+                {
+                    QueryString += " and name = @name";
+                }
+                if (lastname != "")
+                {
+                    QueryString += " and lastname = @lastname";
+                }
                 NpgsqlCommand Command =
                     new NpgsqlCommand(QueryString, sqlConnection.CreateConnection.connection);
                 Command.Parameters.AddWithValue("@name", name);

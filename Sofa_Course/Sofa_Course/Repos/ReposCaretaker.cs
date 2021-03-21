@@ -18,15 +18,16 @@ namespace Sofa_Course.Repos {
             try {
                 string QueryString =
                     "select * from linens_set";
-                NpgsqlCommand Command =
-                    new NpgsqlCommand(QueryString, sqlConnection.CreateConnection.connection);
+                NpgsqlCommand Command = new NpgsqlCommand(QueryString, sqlConnection.CreateConnection.connection);
                 NpgsqlDataReader dataReader = Command.ExecuteReader();
                 foreach (DbDataRecord dbDataRecord in dataReader) {
                     linens = new Linens(
-                        dbDataRecord["id"].ToString(),
-                        dbDataRecord["id_student"].ToString(),
-                        dbDataRecord["date_of_issue"].ToString());
-                    linenses.Add(linens);
+                        dbDataRecord["linens_num"].ToString(),
+                        dbDataRecord["stundent_num"].ToString(),
+                        dbDataRecord["grant_date"].ToString(),
+                        dbDataRecord["revoke_date"].ToString(),                        
+                        dbDataRecord["name"].ToString(),
+                        dbDataRecord["lastname"].ToString());
                 }
                 dataReader.Close();
             }
@@ -35,45 +36,49 @@ namespace Sofa_Course.Repos {
             }
             return linenses;
         }
-        public void GiveLinens(string id, string stud, string date) {
-            try {
-                string QueryString = "update linens_set " +
-                    "set id_student = @id_stud, date_of_issue = '"+date+"' " +
-                    "where id = @id;";
+        
+        internal void GiveLinens(string linens_id, string student_id)
+        {
+            try
+            {
+                string QueryString = "update linens set grant_date = current_date, student_id = @sid where id = @lid;";
                 NpgsqlCommand Command =
                     new NpgsqlCommand(QueryString, sqlConnection.CreateConnection.connection);
-                //Command.Parameters.AddWithValue("@date", date);
-                Command.Parameters.AddWithValue("@id", Convert.ToInt32(id));
-                Command.Parameters.AddWithValue("@id_stud", Convert.ToInt32(stud));
-                try {
+                Command.Parameters.AddWithValue("@sid", student_id);
+                Command.Parameters.AddWithValue("@lid", linens_id);
+                try
+                {
                     Command.ExecuteNonQuery();
                 }
-                catch {
-                    MessageBox.Show("Ошибка выполнения операции. \nПроверьте корректность введенных данных");
+                catch (Exception e)
+                {
+                    MessageBox.Show("Ошибка выполнения операции. \nПроверьте корректность введенных данных" + e.ToString());
                 }
             }
-            catch (Exception e) {
+            catch (Exception e)
+            {
                 MessageBox.Show("Ошибка выполнения операции." + e.Message);
             }
         }
-        public void ReturnLinens(string id) {
-            try {
-                MessageBox.Show(id);
-                string QueryString = "update linens_set " +
-                    "set id_student = null, date_of_issue = null "+
-                    "where id = @id;";
+
+        public void ReturnLinens(string student_id) {
+            try
+            {
+                string QueryString = "update linens set revoke_date = current_date where student_id = @sid";
                 NpgsqlCommand Command =
                     new NpgsqlCommand(QueryString, sqlConnection.CreateConnection.connection);
-                
-                Command.Parameters.AddWithValue("@id", Convert.ToInt32(id));
-                try {
+                Command.Parameters.AddWithValue("@sid", student_id);
+                try
+                {
                     Command.ExecuteNonQuery();
                 }
-                catch {
-                    MessageBox.Show("Ошибка выполнения операции. \nПроверьте корректность введенных данных");
+                catch (Exception e)
+                {
+                    MessageBox.Show("Ошибка выполнения операции. \nПроверьте корректность введенных данных" + e.ToString());
                 }
             }
-            catch (Exception e) {
+            catch (Exception e)
+            {
                 MessageBox.Show("Ошибка выполнения операции." + e.Message);
             }
         }

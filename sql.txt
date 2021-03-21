@@ -66,8 +66,8 @@ values ('name', 'lastname', 'father_name',
 
 _________________ÇÀÂÕÎÇ_______________________________________
 -----------------ÂÛÄÀÒÜ ÁÅËÜÅ---------------------------------
-insert into linens (grant_date, student_id) 
-values (current_date, 1);
+update linens set grant_date = current_date, student_id = @sid 
+where id = @lid;
 
 -----------------ÏĞÈÍßÒÜ ÁÅËÜÅ--------------------------------
 update linens
@@ -129,3 +129,9 @@ create or replace view linens_set as
 select l.id as linens_num, l.grant_date, l.revoke_date, s.id as stundent_num, s.name, s.lastname
 from linens as l, students as s
 where l.student_id = s.id;
+
+______ÏĞÅÄÑÒÀÂËÅÍÈÅ ÄËß ÏĞÎÑÌÎÒĞÀ ÇÀÏĞÎÑÎÂ ÍÀ ĞÅÌÎÍÒ_____________
+create view students_requests as
+select rr.id, rr.type, rr.theme, rr.request_date, rs.student_id
+from repair_request as rr, room_student as rs
+where rr.room_student_id = rs.student_id

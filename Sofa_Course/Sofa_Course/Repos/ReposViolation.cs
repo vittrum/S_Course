@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Npgsql;
 using System.Windows.Forms;
 
@@ -15,11 +11,11 @@ namespace Sofa_Course.Repos
         {
             this.sqlConnection = sqlConnection;
         }
-        public void CreateReport(string stud_id, string text, string date, string fact = "нарушение")
+        public void CreateReport(string stud_id, string text, string fact = "нарушение")
         {
             try
             {
-                string QueryString = "select create_violation('" + date + "', @id_stud, @text,@fact);";
+                string QueryString = "select create_violation(current_date, @id_stud, @text, @fact);";
                 NpgsqlCommand Command =
                     new NpgsqlCommand(QueryString, sqlConnection.CreateConnection.connection);
                 Command.Parameters.AddWithValue("@text", text);

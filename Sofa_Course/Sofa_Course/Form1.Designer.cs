@@ -41,24 +41,29 @@
             this.label11 = new System.Windows.Forms.Label();
             this.btnCreateRequestStudent = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.ComboStudSpec = new System.Windows.Forms.ComboBox();
+            this.ComboStudCourse = new System.Windows.Forms.ComboBox();
             this.dgvShowStudents = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.btnShowStudents = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.tabStaff = new System.Windows.Forms.TabPage();
             this.btnStaffRefresh = new System.Windows.Forms.Button();
             this.dgvStaffShowRequests = new System.Windows.Forms.DataGridView();
             this.tabSupMan = new System.Windows.Forms.TabPage();
-            this.btnGetLinens = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.dgvLinens = new System.Windows.Forms.DataGridView();
+            this.label10 = new System.Windows.Forms.Label();
+            this.btnGetLinens = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.comboLinens = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.btnGuveLinens = new System.Windows.Forms.Button();
             this.dateLinensGive = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.tabWatchman = new System.Windows.Forms.TabPage();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.btnPassGuest = new System.Windows.Forms.Button();
             this.tbGuestName = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -68,11 +73,15 @@
             this.label17 = new System.Windows.Forms.Label();
             this.tbGuestPatr = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tbWatchStudName = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
             this.btnPassStudent = new System.Windows.Forms.Button();
-            this.tbWatchIdFind = new System.Windows.Forms.TextBox();
+            this.tbWatchStudLast = new System.Windows.Forms.TextBox();
             this.dgvWatchFind = new System.Windows.Forms.DataGridView();
+            this.label12 = new System.Windows.Forms.Label();
             this.tabDirector = new System.Windows.Forms.TabPage();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.DgvAdminStudents = new System.Windows.Forms.DataGridView();
             this.btnKick = new System.Windows.Forms.Button();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -106,25 +115,14 @@
             this.label23 = new System.Windows.Forms.Label();
             this.tabReport = new System.Windows.Forms.TabPage();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dateViolation = new System.Windows.Forms.DateTimePicker();
             this.label13 = new System.Windows.Forms.Label();
             this.tbTextReport = new System.Windows.Forms.TextBox();
             this.btnSendReport = new System.Windows.Forms.Button();
-            this.DgvAdminStudents = new System.Windows.Forms.DataGridView();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label19 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.label6 = new System.Windows.Forms.Label();
-            this.comboLinens = new System.Windows.Forms.ComboBox();
-            this.ComboStudCourse = new System.Windows.Forms.ComboBox();
-            this.ComboStudSpec = new System.Windows.Forms.ComboBox();
+            this.btnPassGuest = new System.Windows.Forms.Button();
             this.tabCon.SuspendLayout();
             this.tabLogin.SuspendLayout();
             this.tabStudent.SuspendLayout();
@@ -136,24 +134,23 @@
             this.tabStaff.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaffShowRequests)).BeginInit();
             this.tabSupMan.SuspendLayout();
+            this.groupBox11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLinens)).BeginInit();
             this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.tabWatchman.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWatchFind)).BeginInit();
             this.tabDirector.SuspendLayout();
             this.groupBox10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvAdminStudents)).BeginInit();
             this.groupBox9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvViolations)).BeginInit();
             this.groupBox7.SuspendLayout();
             this.tabReport.SuspendLayout();
             this.groupBox8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvAdminStudents)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.groupBox11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // tabCon
@@ -170,6 +167,7 @@
             this.tabCon.SelectedIndex = 0;
             this.tabCon.Size = new System.Drawing.Size(1071, 587);
             this.tabCon.TabIndex = 0;
+            this.tabCon.SelectedIndexChanged += new System.EventHandler(this.tabCon_SelectedIndexChanged);
             // 
             // tabLogin
             // 
@@ -181,7 +179,7 @@
             this.tabLogin.Controls.Add(this.tbLogin);
             this.tabLogin.Location = new System.Drawing.Point(4, 22);
             this.tabLogin.Name = "tabLogin";
-            this.tabLogin.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabLogin.Padding = new System.Windows.Forms.Padding(3);
             this.tabLogin.Size = new System.Drawing.Size(1063, 561);
             this.tabLogin.TabIndex = 0;
             this.tabLogin.Text = "Login";
@@ -244,7 +242,7 @@
             this.tabStudent.Controls.Add(this.groupBox1);
             this.tabStudent.Location = new System.Drawing.Point(4, 22);
             this.tabStudent.Name = "tabStudent";
-            this.tabStudent.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabStudent.Padding = new System.Windows.Forms.Padding(3);
             this.tabStudent.Size = new System.Drawing.Size(1063, 561);
             this.tabStudent.TabIndex = 1;
             this.tabStudent.Text = "Студент";
@@ -257,7 +255,7 @@
             this.groupBox4.Controls.Add(this.btnConfirmStudent);
             this.groupBox4.Location = new System.Drawing.Point(204, 277);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(347, 179);
+            this.groupBox4.Size = new System.Drawing.Size(437, 278);
             this.groupBox4.TabIndex = 7;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Утвердить ремонт";
@@ -268,7 +266,7 @@
             this.dgvStudentRequest.Location = new System.Drawing.Point(6, 34);
             this.dgvStudentRequest.Name = "dgvStudentRequest";
             this.dgvStudentRequest.RowHeadersWidth = 51;
-            this.dgvStudentRequest.Size = new System.Drawing.Size(335, 88);
+            this.dgvStudentRequest.Size = new System.Drawing.Size(425, 190);
             this.dgvStudentRequest.TabIndex = 15;
             // 
             // label9
@@ -283,9 +281,9 @@
             // 
             // btnConfirmStudent
             // 
-            this.btnConfirmStudent.Location = new System.Drawing.Point(6, 130);
+            this.btnConfirmStudent.Location = new System.Drawing.Point(6, 230);
             this.btnConfirmStudent.Name = "btnConfirmStudent";
-            this.btnConfirmStudent.Size = new System.Drawing.Size(335, 42);
+            this.btnConfirmStudent.Size = new System.Drawing.Size(425, 42);
             this.btnConfirmStudent.TabIndex = 3;
             this.btnConfirmStudent.Text = "Утвердить ";
             this.btnConfirmStudent.UseVisualStyleBackColor = true;
@@ -298,7 +296,7 @@
             this.groupBox3.Controls.Add(this.btnCreateRequestStudent);
             this.groupBox3.Location = new System.Drawing.Point(12, 277);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(186, 179);
+            this.groupBox3.Size = new System.Drawing.Size(186, 278);
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Подать заявку на ремонт";
@@ -308,7 +306,7 @@
             this.tbTypeOfRepair.Location = new System.Drawing.Point(6, 34);
             this.tbTypeOfRepair.Multiline = true;
             this.tbTypeOfRepair.Name = "tbTypeOfRepair";
-            this.tbTypeOfRepair.Size = new System.Drawing.Size(167, 88);
+            this.tbTypeOfRepair.Size = new System.Drawing.Size(174, 190);
             this.tbTypeOfRepair.TabIndex = 19;
             // 
             // label11
@@ -322,9 +320,9 @@
             // 
             // btnCreateRequestStudent
             // 
-            this.btnCreateRequestStudent.Location = new System.Drawing.Point(6, 128);
+            this.btnCreateRequestStudent.Location = new System.Drawing.Point(6, 230);
             this.btnCreateRequestStudent.Name = "btnCreateRequestStudent";
-            this.btnCreateRequestStudent.Size = new System.Drawing.Size(167, 42);
+            this.btnCreateRequestStudent.Size = new System.Drawing.Size(174, 42);
             this.btnCreateRequestStudent.TabIndex = 2;
             this.btnCreateRequestStudent.Text = "Подать";
             this.btnCreateRequestStudent.UseVisualStyleBackColor = true;
@@ -340,10 +338,37 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Location = new System.Drawing.Point(6, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(545, 265);
+            this.groupBox1.Size = new System.Drawing.Size(635, 265);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Посмотреть студентов";
+            // 
+            // ComboStudSpec
+            // 
+            this.ComboStudSpec.FormattingEnabled = true;
+            this.ComboStudSpec.Items.AddRange(new object[] {
+            "CE",
+            "CS",
+            "PS"});
+            this.ComboStudSpec.Location = new System.Drawing.Point(96, 238);
+            this.ComboStudSpec.Name = "ComboStudSpec";
+            this.ComboStudSpec.Size = new System.Drawing.Size(161, 21);
+            this.ComboStudSpec.TabIndex = 16;
+            // 
+            // ComboStudCourse
+            // 
+            this.ComboStudCourse.FormattingEnabled = true;
+            this.ComboStudCourse.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"});
+            this.ComboStudCourse.Location = new System.Drawing.Point(96, 212);
+            this.ComboStudCourse.Name = "ComboStudCourse";
+            this.ComboStudCourse.Size = new System.Drawing.Size(161, 21);
+            this.ComboStudCourse.TabIndex = 15;
             // 
             // dgvShowStudents
             // 
@@ -351,7 +376,7 @@
             this.dgvShowStudents.Location = new System.Drawing.Point(6, 19);
             this.dgvShowStudents.Name = "dgvShowStudents";
             this.dgvShowStudents.RowHeadersWidth = 51;
-            this.dgvShowStudents.Size = new System.Drawing.Size(533, 179);
+            this.dgvShowStudents.Size = new System.Drawing.Size(623, 179);
             this.dgvShowStudents.TabIndex = 14;
             // 
             // label7
@@ -363,6 +388,16 @@
             this.label7.TabIndex = 13;
             this.label7.Text = "Курс";
             // 
+            // btnShowStudents
+            // 
+            this.btnShowStudents.Location = new System.Drawing.Point(263, 204);
+            this.btnShowStudents.Name = "btnShowStudents";
+            this.btnShowStudents.Size = new System.Drawing.Size(366, 55);
+            this.btnShowStudents.TabIndex = 1;
+            this.btnShowStudents.Text = "Посмотреть";
+            this.btnShowStudents.UseVisualStyleBackColor = true;
+            this.btnShowStudents.Click += new System.EventHandler(this.BtnShowStudents_Click);
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -372,23 +407,13 @@
             this.label5.TabIndex = 11;
             this.label5.Text = "Специальность";
             // 
-            // btnShowStudents
-            // 
-            this.btnShowStudents.Location = new System.Drawing.Point(263, 204);
-            this.btnShowStudents.Name = "btnShowStudents";
-            this.btnShowStudents.Size = new System.Drawing.Size(276, 55);
-            this.btnShowStudents.TabIndex = 1;
-            this.btnShowStudents.Text = "Посмотреть";
-            this.btnShowStudents.UseVisualStyleBackColor = true;
-            this.btnShowStudents.Click += new System.EventHandler(this.BtnShowStudents_Click);
-            // 
             // tabStaff
             // 
             this.tabStaff.Controls.Add(this.btnStaffRefresh);
             this.tabStaff.Controls.Add(this.dgvStaffShowRequests);
             this.tabStaff.Location = new System.Drawing.Point(4, 22);
             this.tabStaff.Name = "tabStaff";
-            this.tabStaff.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabStaff.Padding = new System.Windows.Forms.Padding(3);
             this.tabStaff.Size = new System.Drawing.Size(1063, 561);
             this.tabStaff.TabIndex = 2;
             this.tabStaff.Text = "Техперсонал";
@@ -419,21 +444,32 @@
             this.tabSupMan.Controls.Add(this.groupBox5);
             this.tabSupMan.Location = new System.Drawing.Point(4, 22);
             this.tabSupMan.Name = "tabSupMan";
-            this.tabSupMan.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabSupMan.Padding = new System.Windows.Forms.Padding(3);
             this.tabSupMan.Size = new System.Drawing.Size(1063, 561);
             this.tabSupMan.TabIndex = 3;
             this.tabSupMan.Text = "Завхоз";
             this.tabSupMan.UseVisualStyleBackColor = true;
             // 
-            // btnGetLinens
+            // groupBox11
             // 
-            this.btnGetLinens.Location = new System.Drawing.Point(9, 232);
-            this.btnGetLinens.Name = "btnGetLinens";
-            this.btnGetLinens.Size = new System.Drawing.Size(459, 32);
-            this.btnGetLinens.TabIndex = 7;
-            this.btnGetLinens.Text = "Принять";
-            this.btnGetLinens.UseVisualStyleBackColor = true;
-            this.btnGetLinens.Click += new System.EventHandler(this.BtnGetLinens_Click);
+            this.groupBox11.Controls.Add(this.dgvLinens);
+            this.groupBox11.Controls.Add(this.label10);
+            this.groupBox11.Controls.Add(this.btnGetLinens);
+            this.groupBox11.Location = new System.Drawing.Point(486, 6);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(480, 274);
+            this.groupBox11.TabIndex = 8;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "Принять бельё";
+            // 
+            // dgvLinens
+            // 
+            this.dgvLinens.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLinens.Location = new System.Drawing.Point(6, 34);
+            this.dgvLinens.Name = "dgvLinens";
+            this.dgvLinens.RowHeadersWidth = 51;
+            this.dgvLinens.Size = new System.Drawing.Size(462, 165);
+            this.dgvLinens.TabIndex = 5;
             // 
             // label10
             // 
@@ -444,14 +480,15 @@
             this.label10.TabIndex = 4;
             this.label10.Text = "Состояние белья";
             // 
-            // dgvLinens
+            // btnGetLinens
             // 
-            this.dgvLinens.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLinens.Location = new System.Drawing.Point(6, 34);
-            this.dgvLinens.Name = "dgvLinens";
-            this.dgvLinens.RowHeadersWidth = 51;
-            this.dgvLinens.Size = new System.Drawing.Size(462, 165);
-            this.dgvLinens.TabIndex = 5;
+            this.btnGetLinens.Location = new System.Drawing.Point(9, 232);
+            this.btnGetLinens.Name = "btnGetLinens";
+            this.btnGetLinens.Size = new System.Drawing.Size(459, 32);
+            this.btnGetLinens.TabIndex = 7;
+            this.btnGetLinens.Text = "Принять";
+            this.btnGetLinens.UseVisualStyleBackColor = true;
+            this.btnGetLinens.Click += new System.EventHandler(this.BtnGetLinens_Click);
             // 
             // groupBox5
             // 
@@ -467,6 +504,32 @@
             this.groupBox5.TabIndex = 0;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Выдать бельё";
+            // 
+            // comboLinens
+            // 
+            this.comboLinens.FormattingEnabled = true;
+            this.comboLinens.Location = new System.Drawing.Point(50, 205);
+            this.comboLinens.Name = "comboLinens";
+            this.comboLinens.Size = new System.Drawing.Size(121, 21);
+            this.comboLinens.TabIndex = 10;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 18);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(98, 13);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Список студентов";
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(6, 34);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowHeadersWidth = 51;
+            this.dataGridView3.Size = new System.Drawing.Size(446, 165);
+            this.dataGridView3.TabIndex = 9;
             // 
             // btnGuveLinens
             // 
@@ -500,7 +563,7 @@
             this.tabWatchman.Controls.Add(this.groupBox2);
             this.tabWatchman.Location = new System.Drawing.Point(4, 22);
             this.tabWatchman.Name = "tabWatchman";
-            this.tabWatchman.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabWatchman.Padding = new System.Windows.Forms.Padding(3);
             this.tabWatchman.Size = new System.Drawing.Size(1063, 561);
             this.tabWatchman.TabIndex = 4;
             this.tabWatchman.Text = "Вахтёр";
@@ -508,8 +571,6 @@
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.label19);
-            this.groupBox6.Controls.Add(this.dataGridView1);
             this.groupBox6.Controls.Add(this.btnPassGuest);
             this.groupBox6.Controls.Add(this.tbGuestName);
             this.groupBox6.Controls.Add(this.label15);
@@ -519,24 +580,13 @@
             this.groupBox6.Controls.Add(this.label16);
             this.groupBox6.Controls.Add(this.label17);
             this.groupBox6.Controls.Add(this.tbGuestPatr);
-            this.groupBox6.Location = new System.Drawing.Point(371, 6);
+            this.groupBox6.Location = new System.Drawing.Point(6, 299);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(402, 549);
+            this.groupBox6.Size = new System.Drawing.Size(623, 212);
             this.groupBox6.TabIndex = 15;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Пропустить гостя";
             this.groupBox6.Visible = false;
-            // 
-            // btnPassGuest
-            // 
-            this.btnPassGuest.Location = new System.Drawing.Point(31, 377);
-            this.btnPassGuest.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnPassGuest.Name = "btnPassGuest";
-            this.btnPassGuest.Size = new System.Drawing.Size(335, 26);
-            this.btnPassGuest.TabIndex = 14;
-            this.btnPassGuest.Text = "Пропустить";
-            this.btnPassGuest.UseVisualStyleBackColor = true;
-            this.btnPassGuest.Click += new System.EventHandler(this.BtnPassGuest_Click);
             // 
             // tbGuestName
             // 
@@ -604,23 +654,39 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.tbWatchStudName);
             this.groupBox2.Controls.Add(this.label31);
             this.groupBox2.Controls.Add(this.btnPassStudent);
-            this.groupBox2.Controls.Add(this.tbWatchIdFind);
+            this.groupBox2.Controls.Add(this.tbWatchStudLast);
             this.groupBox2.Controls.Add(this.dgvWatchFind);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Location = new System.Drawing.Point(6, 6);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(359, 549);
+            this.groupBox2.Size = new System.Drawing.Size(623, 287);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Пропустить студента";
             // 
+            // tbWatchStudName
+            // 
+            this.tbWatchStudName.Location = new System.Drawing.Point(77, 25);
+            this.tbWatchStudName.Name = "tbWatchStudName";
+            this.tbWatchStudName.Size = new System.Drawing.Size(100, 20);
+            this.tbWatchStudName.TabIndex = 17;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(15, 65);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(56, 13);
+            this.label31.TabIndex = 16;
+            this.label31.Text = "Фамилия";
+            // 
             // btnPassStudent
             // 
             this.btnPassStudent.Location = new System.Drawing.Point(191, 58);
-            this.btnPassStudent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPassStudent.Margin = new System.Windows.Forms.Padding(2);
             this.btnPassStudent.Name = "btnPassStudent";
             this.btnPassStudent.Size = new System.Drawing.Size(162, 26);
             this.btnPassStudent.TabIndex = 15;
@@ -628,12 +694,12 @@
             this.btnPassStudent.UseVisualStyleBackColor = true;
             this.btnPassStudent.Click += new System.EventHandler(this.BtnPassStudent_Click);
             // 
-            // tbWatchIdFind
+            // tbWatchStudLast
             // 
-            this.tbWatchIdFind.Location = new System.Drawing.Point(77, 62);
-            this.tbWatchIdFind.Name = "tbWatchIdFind";
-            this.tbWatchIdFind.Size = new System.Drawing.Size(100, 20);
-            this.tbWatchIdFind.TabIndex = 1;
+            this.tbWatchStudLast.Location = new System.Drawing.Point(77, 62);
+            this.tbWatchStudLast.Name = "tbWatchStudLast";
+            this.tbWatchStudLast.Size = new System.Drawing.Size(100, 20);
+            this.tbWatchStudLast.TabIndex = 1;
             // 
             // dgvWatchFind
             // 
@@ -641,8 +707,17 @@
             this.dgvWatchFind.Location = new System.Drawing.Point(18, 98);
             this.dgvWatchFind.Name = "dgvWatchFind";
             this.dgvWatchFind.RowHeadersWidth = 51;
-            this.dgvWatchFind.Size = new System.Drawing.Size(335, 180);
+            this.dgvWatchFind.Size = new System.Drawing.Size(599, 180);
             this.dgvWatchFind.TabIndex = 0;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(15, 32);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(29, 13);
+            this.label12.TabIndex = 2;
+            this.label12.Text = "Имя";
             // 
             // tabDirector
             // 
@@ -651,7 +726,7 @@
             this.tabDirector.Controls.Add(this.groupBox7);
             this.tabDirector.Location = new System.Drawing.Point(4, 22);
             this.tabDirector.Name = "tabDirector";
-            this.tabDirector.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabDirector.Padding = new System.Windows.Forms.Padding(3);
             this.tabDirector.Size = new System.Drawing.Size(1063, 561);
             this.tabDirector.TabIndex = 5;
             this.tabDirector.Text = "Заведующий общежитием";
@@ -662,18 +737,27 @@
             this.groupBox10.Controls.Add(this.DgvAdminStudents);
             this.groupBox10.Controls.Add(this.btnKick);
             this.groupBox10.Location = new System.Drawing.Point(369, 337);
-            this.groupBox10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox10.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox10.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox10.Size = new System.Drawing.Size(398, 219);
             this.groupBox10.TabIndex = 22;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Выселить студента";
             // 
+            // DgvAdminStudents
+            // 
+            this.DgvAdminStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvAdminStudents.Location = new System.Drawing.Point(5, 18);
+            this.DgvAdminStudents.Name = "DgvAdminStudents";
+            this.DgvAdminStudents.RowHeadersWidth = 51;
+            this.DgvAdminStudents.Size = new System.Drawing.Size(388, 150);
+            this.DgvAdminStudents.TabIndex = 18;
+            // 
             // btnKick
             // 
             this.btnKick.Location = new System.Drawing.Point(7, 173);
-            this.btnKick.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnKick.Margin = new System.Windows.Forms.Padding(2);
             this.btnKick.Name = "btnKick";
             this.btnKick.Size = new System.Drawing.Size(386, 37);
             this.btnKick.TabIndex = 14;
@@ -689,9 +773,9 @@
             this.groupBox9.Controls.Add(this.btnSetPen);
             this.groupBox9.Controls.Add(this.label30);
             this.groupBox9.Location = new System.Drawing.Point(369, 5);
-            this.groupBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox9.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox9.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox9.Size = new System.Drawing.Size(398, 328);
             this.groupBox9.TabIndex = 21;
             this.groupBox9.TabStop = false;
@@ -727,7 +811,7 @@
             // btnSetPen
             // 
             this.btnSetPen.Location = new System.Drawing.Point(6, 284);
-            this.btnSetPen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSetPen.Margin = new System.Windows.Forms.Padding(2);
             this.btnSetPen.Name = "btnSetPen";
             this.btnSetPen.Size = new System.Drawing.Size(388, 37);
             this.btnSetPen.TabIndex = 14;
@@ -771,9 +855,9 @@
             this.groupBox7.Controls.Add(this.label22);
             this.groupBox7.Controls.Add(this.label23);
             this.groupBox7.Location = new System.Drawing.Point(5, 5);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox7.Size = new System.Drawing.Size(359, 551);
             this.groupBox7.TabIndex = 20;
             this.groupBox7.TabStop = false;
@@ -811,7 +895,7 @@
             "2",
             "3"});
             this.comboPrivName.Location = new System.Drawing.Point(122, 266);
-            this.comboPrivName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboPrivName.Margin = new System.Windows.Forms.Padding(2);
             this.comboPrivName.Name = "comboPrivName";
             this.comboPrivName.Size = new System.Drawing.Size(168, 21);
             this.comboPrivName.TabIndex = 21;
@@ -829,7 +913,7 @@
             // btnSettle
             // 
             this.btnSettle.Location = new System.Drawing.Point(122, 343);
-            this.btnSettle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSettle.Margin = new System.Windows.Forms.Padding(2);
             this.btnSettle.Name = "btnSettle";
             this.btnSettle.Size = new System.Drawing.Size(167, 37);
             this.btnSettle.TabIndex = 13;
@@ -840,7 +924,7 @@
             // tbRoomNum
             // 
             this.tbRoomNum.Location = new System.Drawing.Point(122, 235);
-            this.tbRoomNum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbRoomNum.Margin = new System.Windows.Forms.Padding(2);
             this.tbRoomNum.Name = "tbRoomNum";
             this.tbRoomNum.Size = new System.Drawing.Size(168, 20);
             this.tbRoomNum.TabIndex = 19;
@@ -849,7 +933,7 @@
             // tbZavStudNum
             // 
             this.tbZavStudNum.Location = new System.Drawing.Point(122, 39);
-            this.tbZavStudNum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbZavStudNum.Margin = new System.Windows.Forms.Padding(2);
             this.tbZavStudNum.Name = "tbZavStudNum";
             this.tbZavStudNum.Size = new System.Drawing.Size(168, 20);
             this.tbZavStudNum.TabIndex = 0;
@@ -868,7 +952,7 @@
             // tbZavSpec
             // 
             this.tbZavSpec.Location = new System.Drawing.Point(122, 158);
-            this.tbZavSpec.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbZavSpec.Margin = new System.Windows.Forms.Padding(2);
             this.tbZavSpec.Name = "tbZavSpec";
             this.tbZavSpec.Size = new System.Drawing.Size(168, 20);
             this.tbZavSpec.TabIndex = 2;
@@ -887,7 +971,7 @@
             // tbZavFac
             // 
             this.tbZavFac.Location = new System.Drawing.Point(122, 134);
-            this.tbZavFac.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbZavFac.Margin = new System.Windows.Forms.Padding(2);
             this.tbZavFac.Name = "tbZavFac";
             this.tbZavFac.Size = new System.Drawing.Size(168, 20);
             this.tbZavFac.TabIndex = 3;
@@ -906,7 +990,7 @@
             // tbZavPatr
             // 
             this.tbZavPatr.Location = new System.Drawing.Point(122, 110);
-            this.tbZavPatr.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbZavPatr.Margin = new System.Windows.Forms.Padding(2);
             this.tbZavPatr.Name = "tbZavPatr";
             this.tbZavPatr.Size = new System.Drawing.Size(168, 20);
             this.tbZavPatr.TabIndex = 4;
@@ -915,7 +999,7 @@
             // tbPaycheck
             // 
             this.tbPaycheck.Location = new System.Drawing.Point(122, 183);
-            this.tbPaycheck.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbPaycheck.Margin = new System.Windows.Forms.Padding(2);
             this.tbPaycheck.Name = "tbPaycheck";
             this.tbPaycheck.Size = new System.Drawing.Size(168, 20);
             this.tbPaycheck.TabIndex = 15;
@@ -924,7 +1008,7 @@
             // tbZavSurname
             // 
             this.tbZavSurname.Location = new System.Drawing.Point(122, 86);
-            this.tbZavSurname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbZavSurname.Margin = new System.Windows.Forms.Padding(2);
             this.tbZavSurname.Name = "tbZavSurname";
             this.tbZavSurname.Size = new System.Drawing.Size(168, 20);
             this.tbZavSurname.TabIndex = 5;
@@ -933,7 +1017,7 @@
             // tbZavName
             // 
             this.tbZavName.Location = new System.Drawing.Point(122, 63);
-            this.tbZavName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbZavName.Margin = new System.Windows.Forms.Padding(2);
             this.tbZavName.Name = "tbZavName";
             this.tbZavName.Size = new System.Drawing.Size(168, 20);
             this.tbZavName.TabIndex = 6;
@@ -1004,7 +1088,7 @@
             this.tabReport.Controls.Add(this.groupBox8);
             this.tabReport.Location = new System.Drawing.Point(4, 22);
             this.tabReport.Name = "tabReport";
-            this.tabReport.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabReport.Padding = new System.Windows.Forms.Padding(3);
             this.tabReport.Size = new System.Drawing.Size(1063, 561);
             this.tabReport.TabIndex = 6;
             this.tabReport.Text = "Заявка о нарушении";
@@ -1025,6 +1109,32 @@
             this.groupBox8.TabIndex = 6;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Создать заявку о нарушении";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(6, 375);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(109, 13);
+            this.label34.TabIndex = 21;
+            this.label34.Text = "Дата происшествия";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(6, 26);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(47, 13);
+            this.label14.TabIndex = 20;
+            this.label14.Text = "Студент";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(6, 42);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(481, 192);
+            this.dataGridView2.TabIndex = 19;
             // 
             // dateViolation
             // 
@@ -1060,137 +1170,16 @@
             this.btnSendReport.UseVisualStyleBackColor = true;
             this.btnSendReport.Click += new System.EventHandler(this.BtnSendReport_Click);
             // 
-            // DgvAdminStudents
+            // btnPassGuest
             // 
-            this.DgvAdminStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvAdminStudents.Location = new System.Drawing.Point(5, 18);
-            this.DgvAdminStudents.Name = "DgvAdminStudents";
-            this.DgvAdminStudents.RowHeadersWidth = 51;
-            this.DgvAdminStudents.Size = new System.Drawing.Size(388, 150);
-            this.DgvAdminStudents.TabIndex = 18;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(15, 32);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(29, 13);
-            this.label12.TabIndex = 2;
-            this.label12.Text = "Имя";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(15, 65);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(56, 13);
-            this.label31.TabIndex = 16;
-            this.label31.Text = "Фамилия";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(77, 25);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 17;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(31, 192);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(335, 180);
-            this.dataGridView1.TabIndex = 18;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(28, 176);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(124, 13);
-            this.label19.TabIndex = 19;
-            this.label19.Text = "Принимающий студент";
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(6, 42);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(481, 192);
-            this.dataGridView2.TabIndex = 19;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(6, 26);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(47, 13);
-            this.label14.TabIndex = 20;
-            this.label14.Text = "Студент";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(6, 375);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(109, 13);
-            this.label34.TabIndex = 21;
-            this.label34.Text = "Дата происшествия";
-            // 
-            // groupBox11
-            // 
-            this.groupBox11.Controls.Add(this.dgvLinens);
-            this.groupBox11.Controls.Add(this.label10);
-            this.groupBox11.Controls.Add(this.btnGetLinens);
-            this.groupBox11.Location = new System.Drawing.Point(486, 6);
-            this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(480, 274);
-            this.groupBox11.TabIndex = 8;
-            this.groupBox11.TabStop = false;
-            this.groupBox11.Text = "Принять бельё";
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(6, 34);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.Size = new System.Drawing.Size(446, 165);
-            this.dataGridView3.TabIndex = 9;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 18);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(98, 13);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Список студентов";
-            // 
-            // comboLinens
-            // 
-            this.comboLinens.FormattingEnabled = true;
-            this.comboLinens.Location = new System.Drawing.Point(50, 205);
-            this.comboLinens.Name = "comboLinens";
-            this.comboLinens.Size = new System.Drawing.Size(121, 21);
-            this.comboLinens.TabIndex = 10;
-            // 
-            // ComboStudCourse
-            // 
-            this.ComboStudCourse.FormattingEnabled = true;
-            this.ComboStudCourse.Location = new System.Drawing.Point(96, 212);
-            this.ComboStudCourse.Name = "ComboStudCourse";
-            this.ComboStudCourse.Size = new System.Drawing.Size(161, 21);
-            this.ComboStudCourse.TabIndex = 15;
-            // 
-            // ComboStudSpec
-            // 
-            this.ComboStudSpec.FormattingEnabled = true;
-            this.ComboStudSpec.Location = new System.Drawing.Point(96, 238);
-            this.ComboStudSpec.Name = "ComboStudSpec";
-            this.ComboStudSpec.Size = new System.Drawing.Size(161, 21);
-            this.ComboStudSpec.TabIndex = 16;
+            this.btnPassGuest.Location = new System.Drawing.Point(31, 162);
+            this.btnPassGuest.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPassGuest.Name = "btnPassGuest";
+            this.btnPassGuest.Size = new System.Drawing.Size(205, 26);
+            this.btnPassGuest.TabIndex = 14;
+            this.btnPassGuest.Text = "Пропустить";
+            this.btnPassGuest.UseVisualStyleBackColor = true;
+            this.btnPassGuest.Click += new System.EventHandler(this.BtnPassGuest_Click);
             // 
             // Form1
             // 
@@ -1198,7 +1187,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1085, 601);
             this.Controls.Add(this.tabCon);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.tabCon.ResumeLayout(false);
@@ -1216,9 +1205,12 @@
             this.tabStaff.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaffShowRequests)).EndInit();
             this.tabSupMan.ResumeLayout(false);
+            this.groupBox11.ResumeLayout(false);
+            this.groupBox11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLinens)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.tabWatchman.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
@@ -1227,6 +1219,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvWatchFind)).EndInit();
             this.tabDirector.ResumeLayout(false);
             this.groupBox10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DgvAdminStudents)).EndInit();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvViolations)).EndInit();
@@ -1235,12 +1228,7 @@
             this.tabReport.ResumeLayout(false);
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvAdminStudents)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.groupBox11.ResumeLayout(false);
-            this.groupBox11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1296,7 +1284,7 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox tbGuestPatr;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox tbWatchIdFind;
+        private System.Windows.Forms.TextBox tbWatchStudLast;
         private System.Windows.Forms.DataGridView dgvWatchFind;
         private System.Windows.Forms.GroupBox groupBox10;
         private System.Windows.Forms.Button btnKick;
@@ -1322,7 +1310,6 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Button btnPassGuest;
         private System.Windows.Forms.Button btnPassStudent;
         private System.Windows.Forms.DateTimePicker dateViolation;
         private System.Windows.Forms.DateTimePicker dateSettle;
@@ -1334,12 +1321,10 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.DataGridView dgvViolations;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbWatchStudName;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DataGridView DgvAdminStudents;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox11;
         private System.Windows.Forms.ComboBox comboLinens;
         private System.Windows.Forms.Label label6;
@@ -1349,6 +1334,7 @@
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.ComboBox ComboStudSpec;
         private System.Windows.Forms.ComboBox ComboStudCourse;
+        private System.Windows.Forms.Button btnPassGuest;
     }
 }
 
