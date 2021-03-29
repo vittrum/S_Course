@@ -15,7 +15,7 @@ namespace Sofa_Course.Repos
         {
             try
             {
-                string QueryString = "select create_violation(current_date, @id_stud, @text, @fact);";
+                string QueryString = "select create_violation(current_date, @text, @id_stud, @fact);";
                 NpgsqlCommand Command =
                     new NpgsqlCommand(QueryString, sqlConnection.CreateConnection.connection);
                 Command.Parameters.AddWithValue("@text", text);

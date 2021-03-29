@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Npgsql;
 using System.Windows.Forms;
 using Sofa_Course.Tables;
@@ -17,12 +14,12 @@ namespace Sofa_Course.Repos
         {
             this.sqlConnection = sqlConnection;
         }
-        public List<Student> PassStudent(string name, string lastname) {
+        public List<Student> PassStudent(string gname, string lastname) {
             Student student;
             List<Student> students = new List<Student>();
             try {
                 string QueryString ="select * from students where id = id ";
-                if (name != "")
+                if (gname != "")
                 {
                     QueryString += " and name = @name";
                 }
@@ -32,7 +29,7 @@ namespace Sofa_Course.Repos
                 }
                 NpgsqlCommand Command =
                     new NpgsqlCommand(QueryString, sqlConnection.CreateConnection.connection);
-                Command.Parameters.AddWithValue("@name", name);
+                Command.Parameters.AddWithValue("@name", gname);
                 Command.Parameters.AddWithValue("@lastname", lastname);
                 NpgsqlDataReader dataReader = Command.ExecuteReader();
                 foreach (DbDataRecord dbDataRecord in dataReader) {
@@ -52,34 +49,39 @@ namespace Sofa_Course.Repos
             }
             return students;
         }
-        public void PassGuest(string name, string lastname, string father_name, string adress, int room_id)
+        public void PassGuest(string gname, string lastname, string father_name, string adress, int stid)
         {
             try
             {
-                string QueryString = "insert into guests(name, lastname, father_name, " +
-                    "registration_adress, visit_date, arrival_time, room_id) " +
-                    "values(@name, @lastname, @father_name, @adress, current_date, localtime, @room_id);";
+                MessageBox.Show(gname);
+                MessageBox.Show("");
+                string QueryString = "insert into guests(gname, lastname, father_name, registration_adress, visit_date, arrival_time, room_id)" +
+                    " values (@gname, @lastname, @father_name, @adress, current_date, localtime, " +
+                    "(select id from room_student where student_id = @stid));";
                 NpgsqlCommand Command =
                     new NpgsqlCommand(QueryString, sqlConnection.CreateConnection.connection);
-                NpgsqlDataReader dataReader = Command.ExecuteReader();
-                Command.Parameters.AddWithValue("@name", name);
+                // NpgsqlDataReader dataReader = Command.ExecuteReader();
+                Command.Parameters.AddWithValue("@gname", gname);
                 Command.Parameters.AddWithValue("@lastname", lastname);
                 Command.Parameters.AddWithValue("@father_name", father_name);
                 Command.Parameters.AddWithValue("@adress", adress);
-                Command.Parameters.AddWithValue("@room_id", room_id);
+                Command.Parameters.AddWithValue("@stid", Convert.ToInt32(stid));
                 try
                 {
                     Command.ExecuteNonQuery();
+                    MessageBox.Show("Guest passed");
                 }
                 catch (Exception e)
                 {
                     MessageBox.Show("Ошибка выполнения операции. \nПроверьте корректность введенных данных" + e.ToString());
                 }
+
             }
             catch (PostgresException ex)
             {
-                MessageBox.Show("Ошибка базы данных \n" + Convert.ToString(ex));
+                MessageBox.Show("Ошибка базы данных \n" + ex.Message);
             }
+            
         }
     }
 }

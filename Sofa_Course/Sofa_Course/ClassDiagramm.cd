@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Sofa_Course.Repos.ReposAdmin" Collapsed="true">
+    <Position X="1.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAABAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAACAAA=</HashCode>
+      <FileName>Repos\ReposAdmin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sofa_Course.Repos.ReposCaretaker" Collapsed="true">
+    <Position X="3.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAEAAAACAA=</HashCode>
+      <FileName>Repos\ReposCaretaker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sofa_Course.Repos.ReposStaff" Collapsed="true">
+    <Position X="5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Repos\ReposStaff.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sofa_Course.Repos.ReposStudent" Collapsed="true">
+    <Position X="1.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAABAAAAAEAAAIAAAAAAAAEA=</HashCode>
+      <FileName>Repos\ReposStudent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sofa_Course.Repos.ReposViolation" Collapsed="true">
+    <Position X="3.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repos\ReposViolation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sofa_Course.Repos.ReposWatchman" Collapsed="true">
+    <Position X="5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAEAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Repos\ReposWatchman.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sofa_Course.Tables.Guest" Collapsed="true">
+    <Position X="1.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tables\Guest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sofa_Course.Tables.Linens" Collapsed="true">
+    <Position X="3.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQACBAAAAACAAAAAAAAAEAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Tables\Linens.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sofa_Course.Tables.Repairs" Collapsed="true">
+    <Position X="5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAiAAAAAACAAAAAAAAAEAAAAAAAAAAAgQAAQAAAAAA=</HashCode>
+      <FileName>Tables\Repairs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sofa_Course.Tables.Report" Collapsed="true">
+    <Position X="1.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tables\Report.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sofa_Course.Tables.Student" Collapsed="true">
+    <Position X="3.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAgAAIAIAAAAQAACADAAQAAAAAAAAAAQA=</HashCode>
+      <FileName>Tables\Student.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sofa_Course.Factory" Collapsed="true">
+    <Position X="7.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACABgEAAAAAEJAAAAQEAAAAAABAAAAACAAA=</HashCode>
+      <FileName>Factory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sofa_Course.Requester" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAVQAkAAAAABAQAAAABAAAAAAAAAAAAEAAAiCEA=</HashCode>
+      <FileName>Requester.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sofa_Course.Connection" Collapsed="true">
+    <Position X="7.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAgBABAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Connection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sofa_Course.Form1" Collapsed="true">
+    <Position X="10" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>/wBBAMwQQDKgSFAJES2nBBurItYKCxjYkTCCRAFAErA=</HashCode>
+      <FileName>Form1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -18,12 +18,27 @@ namespace Sofa_Course {
             factory.admin.SettleStudent(name, lastname, father_name, course,
                     specialty, invoice, sanpass, category, room);
         }
+
+        internal void ShowStudents(Factory factory, DataGridView dgvCareStudents)
+        {
+            foreach (var i in factory.watchman.PassStudent("", ""))
+            {
+                dgvCareStudents.Rows.Add(i.ID, i.Name, i.Lastname, i.FatherName, i.Specialty, i.Course);
+            }
+        }
         public void KickStudent(Factory factory, int student_id) {
             factory.admin.KickStudent(student_id);
         }
         public void SetPenalty(Factory factory, int violation_id, string penalty) {
             factory.admin.SetPenalty(violation_id, penalty);
         }
+        public void GetViolations(Factory factory, DataGridView dataGridView)
+        {
+            //foreach (var i in factory.admin.GetViolations())
+            {
+
+            }
+        }        
         #endregion 
         
         #region watchman
@@ -41,7 +56,7 @@ namespace Sofa_Course {
         
         #endregion
 
-        // TODO 1
+        
         #region caretaker
 
         public void GiveLinens(Factory factory, string student_id, string linens_id) {
@@ -55,12 +70,20 @@ namespace Sofa_Course {
         public void GetLinens(Factory factory, DataGridView dgv) {
             foreach (var i in factory.caretaker.GetLinens())
             {
-                dgv.Rows.Add(); // TODO
+                dgv.Rows.Add(i.Id, i.IdStud, i.GrantDate, i.RevokeDate);                
+            }
+        }
+
+        public void GetFreeLinens(Factory factory, ComboBox combo)
+        {
+            foreach (var i in factory.caretaker.GetFreeLinens())
+            {
+                combo.Items.Add(i);
             }
         }
         #endregion
 
-        // TODO 2
+        
         #region student 
 
         public void ShowLivingStudents(Factory factory, DataGridView dgv, string course, string specialty) {

@@ -27,7 +27,6 @@
             this.tabLogin = new System.Windows.Forms.TabPage();
             this.btnLogin = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tbPass = new System.Windows.Forms.TextBox();
             this.tbLogin = new System.Windows.Forms.TextBox();
@@ -52,18 +51,19 @@
             this.dgvStaffShowRequests = new System.Windows.Forms.DataGridView();
             this.tabSupMan = new System.Windows.Forms.TabPage();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.dgvLinens = new System.Windows.Forms.DataGridView();
+            this.dgvCareLinens = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
             this.btnGetLinens = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.comboLinens = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dgvCareStudents = new System.Windows.Forms.DataGridView();
             this.btnGuveLinens = new System.Windows.Forms.Button();
             this.dateLinensGive = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.tabWatchman = new System.Windows.Forms.TabPage();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.btnPassGuest = new System.Windows.Forms.Button();
             this.tbGuestName = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -81,7 +81,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.tabDirector = new System.Windows.Forms.TabPage();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.DgvAdminStudents = new System.Windows.Forms.DataGridView();
+            this.dgvAdminStudents = new System.Windows.Forms.DataGridView();
             this.btnKick = new System.Windows.Forms.Button();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -90,39 +90,34 @@
             this.btnSetPen = new System.Windows.Forms.Button();
             this.label30 = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.comboZavRoom = new System.Windows.Forms.ComboBox();
+            this.numZavCourse = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
             this.dateSani = new System.Windows.Forms.DateTimePicker();
-            this.dateSettle = new System.Windows.Forms.DateTimePicker();
-            this.label33 = new System.Windows.Forms.Label();
             this.comboPrivName = new System.Windows.Forms.ComboBox();
             this.label32 = new System.Windows.Forms.Label();
             this.btnSettle = new System.Windows.Forms.Button();
-            this.tbRoomNum = new System.Windows.Forms.TextBox();
-            this.tbZavStudNum = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.tbZavSpec = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
-            this.tbZavFac = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.tbZavPatr = new System.Windows.Forms.TextBox();
             this.tbPaycheck = new System.Windows.Forms.TextBox();
             this.tbZavSurname = new System.Windows.Forms.TextBox();
             this.tbZavName = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.tabReport = new System.Windows.Forms.TabPage();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.tbFactViolation = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dateViolation = new System.Windows.Forms.DateTimePicker();
+            this.dgvReports = new System.Windows.Forms.DataGridView();
             this.label13 = new System.Windows.Forms.Label();
             this.tbTextReport = new System.Windows.Forms.TextBox();
             this.btnSendReport = new System.Windows.Forms.Button();
-            this.btnPassGuest = new System.Windows.Forms.Button();
             this.tabCon.SuspendLayout();
             this.tabLogin.SuspendLayout();
             this.tabStudent.SuspendLayout();
@@ -135,22 +130,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaffShowRequests)).BeginInit();
             this.tabSupMan.SuspendLayout();
             this.groupBox11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLinens)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCareLinens)).BeginInit();
             this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCareStudents)).BeginInit();
             this.tabWatchman.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWatchFind)).BeginInit();
             this.tabDirector.SuspendLayout();
             this.groupBox10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvAdminStudents)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAdminStudents)).BeginInit();
             this.groupBox9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvViolations)).BeginInit();
             this.groupBox7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numZavCourse)).BeginInit();
             this.tabReport.SuspendLayout();
             this.groupBox8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReports)).BeginInit();
             this.SuspendLayout();
             // 
             // tabCon
@@ -167,13 +163,11 @@
             this.tabCon.SelectedIndex = 0;
             this.tabCon.Size = new System.Drawing.Size(1071, 587);
             this.tabCon.TabIndex = 0;
-            this.tabCon.SelectedIndexChanged += new System.EventHandler(this.tabCon_SelectedIndexChanged);
             // 
             // tabLogin
             // 
             this.tabLogin.Controls.Add(this.btnLogin);
             this.tabLogin.Controls.Add(this.label3);
-            this.tabLogin.Controls.Add(this.label2);
             this.tabLogin.Controls.Add(this.label1);
             this.tabLogin.Controls.Add(this.tbPass);
             this.tabLogin.Controls.Add(this.tbLogin);
@@ -187,9 +181,9 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(84, 101);
+            this.btnLogin.Location = new System.Drawing.Point(421, 273);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(75, 23);
+            this.btnLogin.Size = new System.Drawing.Size(100, 23);
             this.btnLogin.TabIndex = 7;
             this.btnLogin.Text = "войти";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -197,25 +191,16 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 75);
+            this.label3.Location = new System.Drawing.Point(386, 250);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(29, 13);
             this.label3.TabIndex = 5;
             this.label3.Text = "pass";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 106);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "label2";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 20);
+            this.label1.Location = new System.Drawing.Point(386, 221);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 13);
             this.label1.TabIndex = 3;
@@ -223,14 +208,14 @@
             // 
             // tbPass
             // 
-            this.tbPass.Location = new System.Drawing.Point(84, 68);
+            this.tbPass.Location = new System.Drawing.Point(421, 247);
             this.tbPass.Name = "tbPass";
             this.tbPass.Size = new System.Drawing.Size(100, 20);
             this.tbPass.TabIndex = 1;
             // 
             // tbLogin
             // 
-            this.tbLogin.Location = new System.Drawing.Point(84, 13);
+            this.tbLogin.Location = new System.Drawing.Point(421, 221);
             this.tbLogin.Name = "tbLogin";
             this.tbLogin.Size = new System.Drawing.Size(100, 20);
             this.tbLogin.TabIndex = 0;
@@ -277,7 +262,6 @@
             this.label9.Size = new System.Drawing.Size(67, 13);
             this.label9.TabIndex = 12;
             this.label9.Text = "Мои заявки";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // btnConfirmStudent
             // 
@@ -452,7 +436,7 @@
             // 
             // groupBox11
             // 
-            this.groupBox11.Controls.Add(this.dgvLinens);
+            this.groupBox11.Controls.Add(this.dgvCareLinens);
             this.groupBox11.Controls.Add(this.label10);
             this.groupBox11.Controls.Add(this.btnGetLinens);
             this.groupBox11.Location = new System.Drawing.Point(486, 6);
@@ -462,14 +446,14 @@
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Принять бельё";
             // 
-            // dgvLinens
+            // dgvCareLinens
             // 
-            this.dgvLinens.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLinens.Location = new System.Drawing.Point(6, 34);
-            this.dgvLinens.Name = "dgvLinens";
-            this.dgvLinens.RowHeadersWidth = 51;
-            this.dgvLinens.Size = new System.Drawing.Size(462, 165);
-            this.dgvLinens.TabIndex = 5;
+            this.dgvCareLinens.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCareLinens.Location = new System.Drawing.Point(6, 34);
+            this.dgvCareLinens.Name = "dgvCareLinens";
+            this.dgvCareLinens.RowHeadersWidth = 51;
+            this.dgvCareLinens.Size = new System.Drawing.Size(462, 165);
+            this.dgvCareLinens.TabIndex = 5;
             // 
             // label10
             // 
@@ -494,7 +478,7 @@
             // 
             this.groupBox5.Controls.Add(this.comboLinens);
             this.groupBox5.Controls.Add(this.label6);
-            this.groupBox5.Controls.Add(this.dataGridView3);
+            this.groupBox5.Controls.Add(this.dgvCareStudents);
             this.groupBox5.Controls.Add(this.btnGuveLinens);
             this.groupBox5.Controls.Add(this.dateLinensGive);
             this.groupBox5.Controls.Add(this.label8);
@@ -522,14 +506,14 @@
             this.label6.TabIndex = 8;
             this.label6.Text = "Список студентов";
             // 
-            // dataGridView3
+            // dgvCareStudents
             // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(6, 34);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.Size = new System.Drawing.Size(446, 165);
-            this.dataGridView3.TabIndex = 9;
+            this.dgvCareStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCareStudents.Location = new System.Drawing.Point(6, 34);
+            this.dgvCareStudents.Name = "dgvCareStudents";
+            this.dgvCareStudents.RowHeadersWidth = 51;
+            this.dgvCareStudents.Size = new System.Drawing.Size(446, 165);
+            this.dgvCareStudents.TabIndex = 9;
             // 
             // btnGuveLinens
             // 
@@ -586,7 +570,17 @@
             this.groupBox6.TabIndex = 15;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Пропустить гостя";
-            this.groupBox6.Visible = false;
+            // 
+            // btnPassGuest
+            // 
+            this.btnPassGuest.Location = new System.Drawing.Point(31, 162);
+            this.btnPassGuest.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPassGuest.Name = "btnPassGuest";
+            this.btnPassGuest.Size = new System.Drawing.Size(205, 26);
+            this.btnPassGuest.TabIndex = 14;
+            this.btnPassGuest.Text = "Пропустить";
+            this.btnPassGuest.UseVisualStyleBackColor = true;
+            this.btnPassGuest.Click += new System.EventHandler(this.BtnPassGuest_Click);
             // 
             // tbGuestName
             // 
@@ -734,32 +728,32 @@
             // 
             // groupBox10
             // 
-            this.groupBox10.Controls.Add(this.DgvAdminStudents);
+            this.groupBox10.Controls.Add(this.dgvAdminStudents);
             this.groupBox10.Controls.Add(this.btnKick);
-            this.groupBox10.Location = new System.Drawing.Point(369, 337);
+            this.groupBox10.Location = new System.Drawing.Point(5, 337);
             this.groupBox10.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox10.Size = new System.Drawing.Size(398, 219);
+            this.groupBox10.Size = new System.Drawing.Size(714, 219);
             this.groupBox10.TabIndex = 22;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Выселить студента";
             // 
-            // DgvAdminStudents
+            // dgvAdminStudents
             // 
-            this.DgvAdminStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvAdminStudents.Location = new System.Drawing.Point(5, 18);
-            this.DgvAdminStudents.Name = "DgvAdminStudents";
-            this.DgvAdminStudents.RowHeadersWidth = 51;
-            this.DgvAdminStudents.Size = new System.Drawing.Size(388, 150);
-            this.DgvAdminStudents.TabIndex = 18;
+            this.dgvAdminStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAdminStudents.Location = new System.Drawing.Point(5, 18);
+            this.dgvAdminStudents.Name = "dgvAdminStudents";
+            this.dgvAdminStudents.RowHeadersWidth = 51;
+            this.dgvAdminStudents.Size = new System.Drawing.Size(704, 150);
+            this.dgvAdminStudents.TabIndex = 18;
             // 
             // btnKick
             // 
-            this.btnKick.Location = new System.Drawing.Point(7, 173);
+            this.btnKick.Location = new System.Drawing.Point(185, 173);
             this.btnKick.Margin = new System.Windows.Forms.Padding(2);
             this.btnKick.Name = "btnKick";
-            this.btnKick.Size = new System.Drawing.Size(386, 37);
+            this.btnKick.Size = new System.Drawing.Size(335, 37);
             this.btnKick.TabIndex = 14;
             this.btnKick.Text = "Выселить";
             this.btnKick.UseVisualStyleBackColor = true;
@@ -776,7 +770,7 @@
             this.groupBox9.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox9.Size = new System.Drawing.Size(398, 328);
+            this.groupBox9.Size = new System.Drawing.Size(500, 328);
             this.groupBox9.TabIndex = 21;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Назначить отработку";
@@ -786,7 +780,7 @@
             this.textBox1.Location = new System.Drawing.Point(5, 199);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(388, 80);
+            this.textBox1.Size = new System.Drawing.Size(490, 80);
             this.textBox1.TabIndex = 17;
             // 
             // label29
@@ -805,7 +799,7 @@
             this.dgvViolations.Location = new System.Drawing.Point(5, 31);
             this.dgvViolations.Name = "dgvViolations";
             this.dgvViolations.RowHeadersWidth = 51;
-            this.dgvViolations.Size = new System.Drawing.Size(388, 150);
+            this.dgvViolations.Size = new System.Drawing.Size(490, 150);
             this.dgvViolations.TabIndex = 15;
             // 
             // btnSetPen
@@ -813,7 +807,7 @@
             this.btnSetPen.Location = new System.Drawing.Point(6, 284);
             this.btnSetPen.Margin = new System.Windows.Forms.Padding(2);
             this.btnSetPen.Name = "btnSetPen";
-            this.btnSetPen.Size = new System.Drawing.Size(388, 37);
+            this.btnSetPen.Size = new System.Drawing.Size(489, 37);
             this.btnSetPen.TabIndex = 14;
             this.btnSetPen.Text = "Назначить";
             this.btnSetPen.UseVisualStyleBackColor = true;
@@ -831,61 +825,85 @@
             // 
             // groupBox7
             // 
+            this.groupBox7.Controls.Add(this.comboZavRoom);
+            this.groupBox7.Controls.Add(this.numZavCourse);
+            this.groupBox7.Controls.Add(this.label2);
             this.groupBox7.Controls.Add(this.dateSani);
-            this.groupBox7.Controls.Add(this.dateSettle);
-            this.groupBox7.Controls.Add(this.label33);
             this.groupBox7.Controls.Add(this.comboPrivName);
             this.groupBox7.Controls.Add(this.label32);
             this.groupBox7.Controls.Add(this.btnSettle);
-            this.groupBox7.Controls.Add(this.tbRoomNum);
-            this.groupBox7.Controls.Add(this.tbZavStudNum);
             this.groupBox7.Controls.Add(this.label28);
             this.groupBox7.Controls.Add(this.tbZavSpec);
             this.groupBox7.Controls.Add(this.label26);
-            this.groupBox7.Controls.Add(this.tbZavFac);
             this.groupBox7.Controls.Add(this.label27);
             this.groupBox7.Controls.Add(this.tbZavPatr);
             this.groupBox7.Controls.Add(this.tbPaycheck);
             this.groupBox7.Controls.Add(this.tbZavSurname);
             this.groupBox7.Controls.Add(this.tbZavName);
-            this.groupBox7.Controls.Add(this.label20);
             this.groupBox7.Controls.Add(this.label25);
             this.groupBox7.Controls.Add(this.label21);
-            this.groupBox7.Controls.Add(this.label24);
             this.groupBox7.Controls.Add(this.label22);
             this.groupBox7.Controls.Add(this.label23);
             this.groupBox7.Location = new System.Drawing.Point(5, 5);
             this.groupBox7.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox7.Size = new System.Drawing.Size(359, 551);
+            this.groupBox7.Size = new System.Drawing.Size(359, 328);
             this.groupBox7.TabIndex = 20;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Поселить";
             // 
+            // comboZavRoom
+            // 
+            this.comboZavRoom.FormattingEnabled = true;
+            this.comboZavRoom.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3"});
+            this.comboZavRoom.Location = new System.Drawing.Point(114, 190);
+            this.comboZavRoom.Margin = new System.Windows.Forms.Padding(2);
+            this.comboZavRoom.Name = "comboZavRoom";
+            this.comboZavRoom.Size = new System.Drawing.Size(168, 21);
+            this.comboZavRoom.TabIndex = 27;
+            // 
+            // numZavCourse
+            // 
+            this.numZavCourse.Location = new System.Drawing.Point(114, 87);
+            this.numZavCourse.Maximum = new decimal(new int[] {
+            6,
+            0,
+            0,
+            0});
+            this.numZavCourse.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numZavCourse.Name = "numZavCourse";
+            this.numZavCourse.Size = new System.Drawing.Size(168, 20);
+            this.numZavCourse.TabIndex = 26;
+            this.numZavCourse.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(13, 94);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(31, 13);
+            this.label2.TabIndex = 25;
+            this.label2.Text = "Курс";
+            // 
             // dateSani
             // 
-            this.dateSani.Location = new System.Drawing.Point(122, 211);
+            this.dateSani.Location = new System.Drawing.Point(114, 165);
             this.dateSani.Name = "dateSani";
             this.dateSani.Size = new System.Drawing.Size(168, 20);
             this.dateSani.TabIndex = 24;
-            // 
-            // dateSettle
-            // 
-            this.dateSettle.Location = new System.Drawing.Point(122, 296);
-            this.dateSettle.Name = "dateSettle";
-            this.dateSettle.Size = new System.Drawing.Size(168, 20);
-            this.dateSettle.TabIndex = 23;
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(21, 296);
-            this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(63, 13);
-            this.label33.TabIndex = 22;
-            this.label33.Text = "Поселение";
             // 
             // comboPrivName
             // 
@@ -894,16 +912,17 @@
             "1",
             "2",
             "3"});
-            this.comboPrivName.Location = new System.Drawing.Point(122, 266);
+            this.comboPrivName.Location = new System.Drawing.Point(114, 220);
             this.comboPrivName.Margin = new System.Windows.Forms.Padding(2);
             this.comboPrivName.Name = "comboPrivName";
             this.comboPrivName.Size = new System.Drawing.Size(168, 21);
             this.comboPrivName.TabIndex = 21;
+            this.comboPrivName.Text = "1";
             // 
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(21, 269);
+            this.label32.Location = new System.Drawing.Point(13, 223);
             this.label32.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(68, 13);
@@ -912,37 +931,19 @@
             // 
             // btnSettle
             // 
-            this.btnSettle.Location = new System.Drawing.Point(122, 343);
+            this.btnSettle.Location = new System.Drawing.Point(114, 261);
             this.btnSettle.Margin = new System.Windows.Forms.Padding(2);
             this.btnSettle.Name = "btnSettle";
-            this.btnSettle.Size = new System.Drawing.Size(167, 37);
+            this.btnSettle.Size = new System.Drawing.Size(168, 37);
             this.btnSettle.TabIndex = 13;
             this.btnSettle.Text = "Поселить";
             this.btnSettle.UseVisualStyleBackColor = true;
             this.btnSettle.Click += new System.EventHandler(this.BtnSettle_Click);
             // 
-            // tbRoomNum
-            // 
-            this.tbRoomNum.Location = new System.Drawing.Point(122, 235);
-            this.tbRoomNum.Margin = new System.Windows.Forms.Padding(2);
-            this.tbRoomNum.Name = "tbRoomNum";
-            this.tbRoomNum.Size = new System.Drawing.Size(168, 20);
-            this.tbRoomNum.TabIndex = 19;
-            this.tbRoomNum.Text = "1";
-            // 
-            // tbZavStudNum
-            // 
-            this.tbZavStudNum.Location = new System.Drawing.Point(122, 39);
-            this.tbZavStudNum.Margin = new System.Windows.Forms.Padding(2);
-            this.tbZavStudNum.Name = "tbZavStudNum";
-            this.tbZavStudNum.Size = new System.Drawing.Size(168, 20);
-            this.tbZavStudNum.TabIndex = 0;
-            this.tbZavStudNum.Text = "123";
-            // 
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(21, 239);
+            this.label28.Location = new System.Drawing.Point(13, 193);
             this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(89, 13);
@@ -951,7 +952,7 @@
             // 
             // tbZavSpec
             // 
-            this.tbZavSpec.Location = new System.Drawing.Point(122, 158);
+            this.tbZavSpec.Location = new System.Drawing.Point(114, 112);
             this.tbZavSpec.Margin = new System.Windows.Forms.Padding(2);
             this.tbZavSpec.Name = "tbZavSpec";
             this.tbZavSpec.Size = new System.Drawing.Size(168, 20);
@@ -961,26 +962,17 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(21, 211);
+            this.label26.Location = new System.Drawing.Point(13, 165);
             this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(67, 13);
             this.label26.TabIndex = 17;
             this.label26.Text = "Санпропуск";
             // 
-            // tbZavFac
-            // 
-            this.tbZavFac.Location = new System.Drawing.Point(122, 134);
-            this.tbZavFac.Margin = new System.Windows.Forms.Padding(2);
-            this.tbZavFac.Name = "tbZavFac";
-            this.tbZavFac.Size = new System.Drawing.Size(168, 20);
-            this.tbZavFac.TabIndex = 3;
-            this.tbZavFac.Text = "фак";
-            // 
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(21, 187);
+            this.label27.Location = new System.Drawing.Point(13, 141);
             this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(61, 13);
@@ -989,7 +981,7 @@
             // 
             // tbZavPatr
             // 
-            this.tbZavPatr.Location = new System.Drawing.Point(122, 110);
+            this.tbZavPatr.Location = new System.Drawing.Point(114, 64);
             this.tbZavPatr.Margin = new System.Windows.Forms.Padding(2);
             this.tbZavPatr.Name = "tbZavPatr";
             this.tbZavPatr.Size = new System.Drawing.Size(168, 20);
@@ -998,7 +990,7 @@
             // 
             // tbPaycheck
             // 
-            this.tbPaycheck.Location = new System.Drawing.Point(122, 183);
+            this.tbPaycheck.Location = new System.Drawing.Point(114, 137);
             this.tbPaycheck.Margin = new System.Windows.Forms.Padding(2);
             this.tbPaycheck.Name = "tbPaycheck";
             this.tbPaycheck.Size = new System.Drawing.Size(168, 20);
@@ -1007,7 +999,7 @@
             // 
             // tbZavSurname
             // 
-            this.tbZavSurname.Location = new System.Drawing.Point(122, 86);
+            this.tbZavSurname.Location = new System.Drawing.Point(114, 40);
             this.tbZavSurname.Margin = new System.Windows.Forms.Padding(2);
             this.tbZavSurname.Name = "tbZavSurname";
             this.tbZavSurname.Size = new System.Drawing.Size(168, 20);
@@ -1016,27 +1008,17 @@
             // 
             // tbZavName
             // 
-            this.tbZavName.Location = new System.Drawing.Point(122, 63);
+            this.tbZavName.Location = new System.Drawing.Point(114, 17);
             this.tbZavName.Margin = new System.Windows.Forms.Padding(2);
             this.tbZavName.Name = "tbZavName";
             this.tbZavName.Size = new System.Drawing.Size(168, 20);
             this.tbZavName.TabIndex = 6;
             this.tbZavName.Text = "имя";
             // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(21, 41);
-            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(41, 13);
-            this.label20.TabIndex = 7;
-            this.label20.Text = "Номер";
-            // 
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(21, 162);
+            this.label25.Location = new System.Drawing.Point(13, 116);
             this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(85, 13);
@@ -1046,27 +1028,17 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(21, 67);
+            this.label21.Location = new System.Drawing.Point(13, 21);
             this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(29, 13);
             this.label21.TabIndex = 8;
             this.label21.Text = "Имя";
             // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(21, 138);
-            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(63, 13);
-            this.label24.TabIndex = 11;
-            this.label24.Text = "Факультет";
-            // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(21, 91);
+            this.label22.Location = new System.Drawing.Point(13, 45);
             this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(56, 13);
@@ -1076,7 +1048,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(21, 112);
+            this.label23.Location = new System.Drawing.Point(13, 66);
             this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(54, 13);
@@ -1096,28 +1068,36 @@
             // 
             // groupBox8
             // 
+            this.groupBox8.Controls.Add(this.tbFactViolation);
             this.groupBox8.Controls.Add(this.label34);
             this.groupBox8.Controls.Add(this.label14);
-            this.groupBox8.Controls.Add(this.dataGridView2);
-            this.groupBox8.Controls.Add(this.dateViolation);
+            this.groupBox8.Controls.Add(this.dgvReports);
             this.groupBox8.Controls.Add(this.label13);
             this.groupBox8.Controls.Add(this.tbTextReport);
             this.groupBox8.Controls.Add(this.btnSendReport);
             this.groupBox8.Location = new System.Drawing.Point(6, 6);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(493, 467);
+            this.groupBox8.Size = new System.Drawing.Size(647, 491);
             this.groupBox8.TabIndex = 6;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Создать заявку о нарушении";
             // 
+            // tbFactViolation
+            // 
+            this.tbFactViolation.Location = new System.Drawing.Point(9, 354);
+            this.tbFactViolation.Multiline = true;
+            this.tbFactViolation.Name = "tbFactViolation";
+            this.tbFactViolation.Size = new System.Drawing.Size(632, 82);
+            this.tbFactViolation.TabIndex = 22;
+            // 
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(6, 375);
+            this.label34.Location = new System.Drawing.Point(6, 338);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(109, 13);
+            this.label34.Size = new System.Drawing.Size(93, 13);
             this.label34.TabIndex = 21;
-            this.label34.Text = "Дата происшествия";
+            this.label34.Text = "Факт нарушения";
             // 
             // label14
             // 
@@ -1128,20 +1108,13 @@
             this.label14.TabIndex = 20;
             this.label14.Text = "Студент";
             // 
-            // dataGridView2
+            // dgvReports
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(6, 42);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(481, 192);
-            this.dataGridView2.TabIndex = 19;
-            // 
-            // dateViolation
-            // 
-            this.dateViolation.Location = new System.Drawing.Point(9, 391);
-            this.dateViolation.Name = "dateViolation";
-            this.dateViolation.Size = new System.Drawing.Size(142, 20);
-            this.dateViolation.TabIndex = 18;
+            this.dgvReports.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvReports.Location = new System.Drawing.Point(6, 42);
+            this.dgvReports.Name = "dgvReports";
+            this.dgvReports.Size = new System.Drawing.Size(635, 192);
+            this.dgvReports.TabIndex = 19;
             // 
             // label13
             // 
@@ -1157,29 +1130,18 @@
             this.tbTextReport.Location = new System.Drawing.Point(9, 253);
             this.tbTextReport.Multiline = true;
             this.tbTextReport.Name = "tbTextReport";
-            this.tbTextReport.Size = new System.Drawing.Size(478, 115);
+            this.tbTextReport.Size = new System.Drawing.Size(632, 82);
             this.tbTextReport.TabIndex = 16;
             // 
             // btnSendReport
             // 
-            this.btnSendReport.Location = new System.Drawing.Point(9, 417);
+            this.btnSendReport.Location = new System.Drawing.Point(9, 442);
             this.btnSendReport.Name = "btnSendReport";
-            this.btnSendReport.Size = new System.Drawing.Size(478, 44);
+            this.btnSendReport.Size = new System.Drawing.Size(632, 44);
             this.btnSendReport.TabIndex = 0;
             this.btnSendReport.Text = "Создать";
             this.btnSendReport.UseVisualStyleBackColor = true;
             this.btnSendReport.Click += new System.EventHandler(this.BtnSendReport_Click);
-            // 
-            // btnPassGuest
-            // 
-            this.btnPassGuest.Location = new System.Drawing.Point(31, 162);
-            this.btnPassGuest.Margin = new System.Windows.Forms.Padding(2);
-            this.btnPassGuest.Name = "btnPassGuest";
-            this.btnPassGuest.Size = new System.Drawing.Size(205, 26);
-            this.btnPassGuest.TabIndex = 14;
-            this.btnPassGuest.Text = "Пропустить";
-            this.btnPassGuest.UseVisualStyleBackColor = true;
-            this.btnPassGuest.Click += new System.EventHandler(this.BtnPassGuest_Click);
             // 
             // Form1
             // 
@@ -1207,10 +1169,10 @@
             this.tabSupMan.ResumeLayout(false);
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLinens)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCareLinens)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCareStudents)).EndInit();
             this.tabWatchman.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
@@ -1219,16 +1181,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvWatchFind)).EndInit();
             this.tabDirector.ResumeLayout(false);
             this.groupBox10.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DgvAdminStudents)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAdminStudents)).EndInit();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvViolations)).EndInit();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numZavCourse)).EndInit();
             this.tabReport.ResumeLayout(false);
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReports)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1239,7 +1202,6 @@
         private System.Windows.Forms.TabPage tabLogin;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbPass;
         private System.Windows.Forms.TextBox tbLogin;
@@ -1263,7 +1225,7 @@
         private System.Windows.Forms.DataGridView dgvStaffShowRequests;
         private System.Windows.Forms.Button btnGetLinens;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DataGridView dgvLinens;
+        private System.Windows.Forms.DataGridView dgvCareLinens;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Button btnGuveLinens;
         private System.Windows.Forms.DateTimePicker dateLinensGive;
@@ -1293,27 +1255,19 @@
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.Button btnSettle;
-        private System.Windows.Forms.TextBox tbRoomNum;
-        private System.Windows.Forms.TextBox tbZavStudNum;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.TextBox tbZavSpec;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.TextBox tbZavFac;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.TextBox tbZavPatr;
         private System.Windows.Forms.TextBox tbPaycheck;
         private System.Windows.Forms.TextBox tbZavSurname;
         private System.Windows.Forms.TextBox tbZavName;
-        private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Button btnPassStudent;
-        private System.Windows.Forms.DateTimePicker dateViolation;
-        private System.Windows.Forms.DateTimePicker dateSettle;
-        private System.Windows.Forms.Label label33;
         private System.Windows.Forms.ComboBox comboPrivName;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.DateTimePicker dateSani;
@@ -1324,17 +1278,21 @@
         private System.Windows.Forms.TextBox tbWatchStudName;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.DataGridView DgvAdminStudents;
+        private System.Windows.Forms.DataGridView dgvAdminStudents;
         private System.Windows.Forms.GroupBox groupBox11;
         private System.Windows.Forms.ComboBox comboLinens;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView dgvCareStudents;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgvReports;
         private System.Windows.Forms.ComboBox ComboStudSpec;
         private System.Windows.Forms.ComboBox ComboStudCourse;
         private System.Windows.Forms.Button btnPassGuest;
+        private System.Windows.Forms.NumericUpDown numZavCourse;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboZavRoom;
+        private System.Windows.Forms.TextBox tbFactViolation;
     }
 }
 

@@ -55,6 +55,13 @@ namespace Sofa_Course.Repos
                 MessageBox.Show("Ошибка выполнения операции." + e.Message);
             }
         }
+
+        internal int GetViolations()
+        {
+            return 1;
+            //throw new NotImplementedException();
+        }
+
         public void KickStudent(int room_student_id)
         {
             try
