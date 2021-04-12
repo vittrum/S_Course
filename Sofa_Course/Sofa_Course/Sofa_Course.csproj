@@ -77,6 +77,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Auth\Login.cs" />
+    <Compile Include="Auth\Register.cs" />
     <Compile Include="Connection.cs" />
     <Compile Include="Factory.cs" />
     <Compile Include="Form1.cs">
@@ -94,7 +96,6 @@
     <Compile Include="Repos\ReposViolation.cs" />
     <Compile Include="Repos\ReposWatchman.cs" />
     <Compile Include="Requester.cs" />
-    <Compile Include="Tables\Guest.cs" />
     <Compile Include="Tables\Linens.cs" />
     <Compile Include="Tables\Repairs.cs" />
     <Compile Include="Tables\Report.cs" />

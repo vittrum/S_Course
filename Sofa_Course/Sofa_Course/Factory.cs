@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Npgsql;
 using Sofa_Course.Repos;
+using Sofa_Course.Auth;
 
 namespace Sofa_Course {
     class Factory {
@@ -17,6 +18,9 @@ namespace Sofa_Course {
         public ReposStudent student { get; }
         public ReposViolation violation { get; }
         public ReposWatchman watchman { get; }
+        public Login login { get; }
+        public Registration reg { get; }
+
 
         private bool Disposed = false;
 
@@ -31,6 +35,8 @@ namespace Sofa_Course {
             student = new ReposStudent(SqlConnection);
             violation = new ReposViolation(SqlConnection);
             watchman = new ReposWatchman(SqlConnection);
+            login = new Login(SqlConnection);
+            reg = new Registration(SqlConnection);
         }
 
         public void OpenConnection() {

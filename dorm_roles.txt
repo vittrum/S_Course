@@ -1,0 +1,19 @@
+create role student;
+create role caretaker;
+create role admininstrator;
+create role watchman;
+create role technitian;
+
+create user caretaker1 with password '1' in role caretaker;
+create user admin1 with password '1' in role administrator;
+create user tech1 with password '1' in role technitian;
+create user watch1 with password '1' in role watchman;
+create user stud1 with password '1' in role student;
+
+grant all privileges on all sequences in schema public 
+to administrator, student, technitian, watchman, caretaker;
+
+grant all privileges on all tables in schema public to administrator;
+
+grant select on all tables in schema public to 
+administrator, watchman, caretaker, student, technitian;

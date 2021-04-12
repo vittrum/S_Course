@@ -11,7 +11,7 @@ namespace Sofa_Course
         private void Init() {
             // student
             FillDgvStudentRequests(dgvStudentRequest);
-            requester.ShowStudentsRequest(factory, dgvStudentRequest, login);
+            requester.ShowStudentsRequest(factory, dgvStudentRequest, _id);
             // caretaker
             FillDgvStudentsShort(dgvCareStudents);
             requester.ShowStudents(factory, dgvCareStudents);
@@ -32,7 +32,7 @@ namespace Sofa_Course
         }
         Requester requester = new Requester();
         Factory factory = new Factory("127.0.0.1", "5432", "postgres", "1", "dormitory");
-        string login = "1";
+        string _id = "1";
 
         #region Student
         private void BtnShowStudents_Click(object sender, EventArgs e) {
@@ -42,9 +42,9 @@ namespace Sofa_Course
             requester.ShowLivingStudents(factory, dgvShowStudents, course, specialty);
         }
         private void BtnCreateRequestStudent_Click(object sender, EventArgs e) {
-            requester.CreateRepairRequest(factory, login, tbTypeOfRepair.Text, "поломка");
+            requester.CreateRepairRequest(factory, _id, tbTypeOfRepair.Text, "поломка");
             FillDgvStudentRequests(dgvStudentRequest);
-            requester.ShowStudentsRequest(factory, dgvStudentRequest, login);
+            requester.ShowStudentsRequest(factory, dgvStudentRequest, _id);
         }
         private void BtnConfirmStudent_Click(object sender, EventArgs e) {
             string repair_id = dgvStudentRequest.SelectedRows[0].Cells[0].Value.ToString();
@@ -52,7 +52,7 @@ namespace Sofa_Course
             {
                 requester.ConfirmRepairs(factory, repair_id);
                 FillDgvStudentRequests(dgvStudentRequest);
-                requester.ShowStudentsRequest(factory, dgvStudentRequest, login);
+                requester.ShowStudentsRequest(factory, dgvStudentRequest, _id);
             }            
         }
         #endregion
@@ -196,6 +196,62 @@ namespace Sofa_Course
             requester.CreateViolation(factory, student_id, text, fact);
         }
 
-        
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            string login = tbLogin.Text;
+            string password = tbPass.Text;
+            string role = "";
+            bool success = true;
+            try
+            {
+                factory = new Factory("127.0.0.1", "5432", login, password, "dormitory");
+                role = requester.CheckRole(factory, login);
+            }
+            catch (Exception ex)
+            {
+                success = false;
+                MessageBox.Show("Проверьте соединение и корректность введенных данных" + ex.Message);
+            }
+            if (success)
+            {
+                tabCon.Visible = true;                
+                if (role == "student")
+                {
+                    _id = requester.GetId(factory, role, login);
+                    tabStaff.Dispose();
+                    tabSupMan.Dispose();
+                    tabWatchman.Dispose();
+                    tabDirector.Dispose();
+                }
+                else if (role == "caretaker")
+                {
+                    tabStudent.Dispose();
+                    tabStaff.Dispose();
+                    tabWatchman.Dispose();
+                    tabDirector.Dispose();
+                }
+                else if (role == "tech")
+                {
+                    tabStudent.Dispose();
+                    tabStaff.Dispose();
+                    tabSupMan.Dispose();
+                    tabDirector.Dispose();
+                }
+                else if (role == "watchman")
+                {
+                    tabStudent.Dispose();
+                    tabStaff.Dispose();
+                    tabSupMan.Dispose();
+                    tabDirector.Dispose();
+                }
+                else if (role == "admin")
+                {
+                    tabStudent.Dispose();
+                    tabStaff.Dispose();
+                    tabSupMan.Dispose();
+                    tabWatchman.Dispose();
+                }
+            }
+        }
     }
 }

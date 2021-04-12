@@ -114,7 +114,7 @@ namespace Sofa_Course {
         public void ShowRepairRequests(Factory factory, DataGridView dgv) {
             foreach (var i in factory.staff.GetAllRequests())
             {
-                dgv.Rows.Add(i.Id, i.Id_room, i.Type, i.Desc, i.Date_App);
+                dgv.Rows.Add(i.Id, i.Id_room, i.Type, i.Desc, i.Date_App, i.Date_Comp);
             }
         }
 
@@ -122,6 +122,17 @@ namespace Sofa_Course {
         public void CreateViolation(Factory factory, string id_stud, string type, string fact)
         {
             factory.violation.CreateReport(id_stud, type, fact);
+        }
+
+        // Auth
+        internal string GetId(Factory factory, string role, string login)
+        {
+            return factory.login.GetId(login, role);
+        }
+
+        internal string CheckRole(Factory factory, string login)
+        {
+            return factory.login.Check_Role(login);
         }
     }
 }
